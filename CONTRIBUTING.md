@@ -1,10 +1,10 @@
 # Contributing to CPLC
 
-### Thank you for your interest in this project, heres how you can help!
+### Thank You!
 
->First off, thank you for considering contributing to Active Admin. It's people like you that make Active Admin such a great tool.
+>Thank you for considering contributing to CPLC. With your help, this project can help educate and make PLC technology more accessible.
 
-[source: [Active Admin](https://github.com/activeadmin/activeadmin/blob/master/CONTRIBUTING.md)] **Need more inspiration?** [1] [Read The Docs](http://read-the-docs.readthedocs.org/en/latest/contribute.html) [2] [Mustache.js](https://github.com/janl/mustache.js/#contributing)
+[source: [CPLC](https://github.com/codycook96/CPLC/master/CONTRIBUTING.md)] **Need more inspiration?** [1] [Read The Docs](http://read-the-docs.readthedocs.org/en/latest/contribute.html) 
 
 ### Tell them why they should read your guidelines.
 
