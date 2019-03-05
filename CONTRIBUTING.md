@@ -2,13 +2,13 @@
 
 ### Thank You!
 
->Thank you for considering contributing to CPLC. With your help, this project can help educate and make PLC technology more accessible.
+Thank you for considering contributing to CPLC. With your help, this project can help educate and make PLC technology more accessible.
 
 [Source](https://github.com/codycook96/CPLC/master/CONTRIBUTING.md) [Documentation](https://github.com/codycook96/CPLC/master/) [Website](https://cplcproject.org/) [Donate](https://cplcproject.org/donate/) 
 
 ### Preface.
 
->This is project intended to be a basic platform on which anyone can learn, write, and execute PLC programs without needing proprietary software packages or expensive hardware PLC's. This project is intented to be robust, modular, and fast. However, I am a novice developer and my attention unfortunately cannot be dedicated fully to this project. I welcome all contributions and I aim to integrate useful contributions as much as I am able. For the time being, I will be simply taking suggestions and selectively implimenting them myself.
+This is project intended to be a basic platform on which anyone can learn, write, and execute PLC programs without needing proprietary software packages or expensive hardware PLC's. This project is intented to be robust, modular, and fast. However, I am a novice developer and my attention unfortunately cannot be dedicated fully to this project. I welcome all contributions and I aim to integrate useful contributions as much as I am able. For the time being, I will be simply taking suggestions and selectively implimenting them myself.
 
 ### Types of Contributions
 
@@ -20,13 +20,15 @@ If you find a security vulnerability, *do NOT open an issue*. Email ProjectCPLC@
 
 If you think you may have found a vulnerability but are unsure, remember the C.I.A. anacronysm:
 
->-Can I jeopardize **confidential** information? E.g. revealing a users password.<br/>
--Can I jeopardize the **integrity** of information? E.g. changing a users password.<br/>
--Can I jeopardize the **accessibility** of information? E.g. prevent users from loggin in.
+>-Can I jeopardize **confidential** information? E.g. revealing a users password.
+
+>-Can I jeopardize the **integrity** of information? E.g. changing a users password.<br/>
+
+>-Can I jeopardize the **accessibility** of information? E.g. prevent users from loggin in.
 
 Though this platform will likely never contain a user system these examples allow you to visualize what different security vulnerabilities may look like.
 
->If think you may have found a vulnerability and wish to test it, I suggest using a virtual machine, such as a Linux VirtualBox, and not running the exploit on your personal machine.
+If think you may have found a vulnerability and wish to test it, I suggest using a virtual machine, such as a Linux VirtualBox, and not running the exploit on your personal machine.
 
 ### Bug Report
 
@@ -42,8 +44,8 @@ When reporting a bug, for your convenience I recomend usng this template:
 **Comments**: *Your code sucks*<br/>
 
 
-> Copy this: 
-**C++ Version**:<br/>
+Copy this for your bug report: 
+>**C++ Version**:<br/>
 **Compiler**:<br/>
 **Operating System and Version**:<br/> 
 **What did you do**:<br/>
