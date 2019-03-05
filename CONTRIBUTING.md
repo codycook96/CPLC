@@ -4,7 +4,7 @@
 
 >Thank you for considering contributing to CPLC. With your help, this project can help educate and make PLC technology more accessible.
 
-[source: [CPLC](https://github.com/codycook96/CPLC/master/CONTRIBUTING.md)] **Need more inspiration?** [1] [Read The Docs](http://read-the-docs.readthedocs.org/en/latest/contribute.html) 
+[Source](https://github.com/codycook96/CPLC/master/CONTRIBUTING.md) [Documentation](https://github.com/codycook96/CPLC/master/) [Website](https://cplcproject.org/) [Donate](https://cplcproject.org/donate/) 
 
 ### Tell them why they should read your guidelines.
 
