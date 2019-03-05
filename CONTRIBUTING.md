@@ -12,7 +12,7 @@ This is project intended to be a basic platform on which anyone can learn, write
 
 ## Contributions
 
-[Security Report](#Security Report) [Bug Report](#Bug Report) [Documentation Improvement](#Documentation Improvement) [Feature Suggestion](#Feature Suggestion)
+[Security Report](#Security-Report) [Bug Report](#Bug-Report) [Documentation Improvement](#Documentation-Improvement) [Feature Suggestion](#Feature-Suggestion)
 
 ### Security Report
 
