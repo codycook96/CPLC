@@ -14,43 +14,43 @@
 
 >
 
-### Security Report
+## Security Report
 
-> If you find a security vulnerability, *do NOT open an issue*. Email ProjectCPLC@gmail.com with all the relevant details instead. This is crucial in maintaining the security of users as well as the trust of the project as a safe learning tool. 
+If you find a security vulnerability, *do NOT open an issue*. Email ProjectCPLC@gmail.com with all the relevant details instead. This is crucial in maintaining the security of users as well as the trust of the project as a safe learning tool. 
 
->If you think you may have found a vulnerability but are unsure, remember the C.I.A. anacronysm:
+If you think you may have found a vulnerability but are unsure, remember the C.I.A. anacronysm:
 
->-Can I jeopardize **confidential** information? E.g. revealing a users password.
->-Can I jeopardize the **integrity** of information? E.g. changing a users password.
->-Can I jeopardize the **accessibility** of information? E.g. prevent users from loggin in.
+>-Can I jeopardize **confidential** information? E.g. revealing a users password.<br/>
+-Can I jeopardize the **integrity** of information? E.g. changing a users password.<br/>
+-Can I jeopardize the **accessibility** of information? E.g. prevent users from loggin in.
 
->Though this platform will likely never contain a user system these examples allow you to visualize what different security vulnerabilities may look like.
+Though this platform will likely never contain a user system these examples allow you to visualize what different security vulnerabilities may look like.
 
 >If think you may have found a vulnerability and wish to test it, I suggest using a virtual machine, such as a Linux VirtualBox, and not running the exploit on your personal machine.
 
 ### Bug Report
 
-> When reporting a bug, for your convenience I recomend usng this template:
+When reporting a bug, for your convenience I recomend usng this template:
 
-> **C++ Version**: *C++98, C++11, C++14,  etc*
->**Compiler**: *GNU, MinGQ, Cygwin, etc*
->**Operating System and Version**: *Windows 7, Windows 10, Ubuntu 16, Ubuntu 14, MacOS Mojave, etc*
->**What did you do**: *compiled program, ran ladder file, etc*
->**What did you expect to see**: *succesful compilation, output abc high, etc*
->**What did you actually see**: *compiler error x, output abc low, etc*
->**Pastebin link to relevant code**: *https://pastebin.com/*
->**Comments**: *Your code sucks*
+>**C++ Version**: *C++98, C++11, C++14,  etc*<br/>
+**Compiler**: *GNU, MinGQ, Cygwin, etc*<br/>
+**Operating System and Version**: *Windows 7, Windows 10, Ubuntu 16, Ubuntu 14, MacOS Mojave, etc*<br/>
+**What did you do**: *compiled program, ran ladder file, etc*<br/>
+**What did you expect to see**: *succesful compilation, output abc high, etc*<br/>
+**What did you actually see**: *compiler error x, output abc low, etc*<br/>
+**Pastebin link to relevant code**: *https://pastebin.com/*<br/>
+**Comments**: *Your code sucks*<br/>
 
 
 > Copy this: 
-**C++ Version**: 
-**Compiler**: 
-**Operating System and Version**: 
-**What did you do**: 
-**What did you expect to see**:
-**What did you actually see**:
-**Pastebin link to relevant code**:
-**Comments**:
+**C++ Version**:<br/>
+**Compiler**:<br/>
+**Operating System and Version**:<br/> 
+**What did you do**:<br/>
+**What did you expect to see**:<br/>
+**What did you actually see**:<br/>
+**Pastebin link to relevant code**:<br/>
+**Comments**:<br/>
 
 ### Tell them why they should read your guidelines.
 
