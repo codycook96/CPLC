@@ -1,2 +1,2 @@
 # CPLC
-Open source program for converting PLC programs into c/c++ files
+Open source program for converting and running PLC programs c/c++ files.
