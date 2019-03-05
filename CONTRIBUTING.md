@@ -10,11 +10,11 @@ Thank you for considering contributing to CPLC. With your help, this project can
 
 This is project intended to be a basic platform on which anyone can learn, write, and execute PLC programs without needing proprietary software packages or expensive hardware PLC's. This project is intented to be robust, modular, and fast. However, I am a novice developer and my attention unfortunately cannot be dedicated fully to this project. I welcome all contributions and I aim to integrate useful contributions as much as I am able. For the time being, I will be simply taking suggestions and selectively implimenting them myself.
 
-### Types of Contributions
+## Contributions
 
->
+[Security Report](#Security Report) [Bug Report](#Bug Report) [Documentation Improvement](#Documentation Improvement) [Feature Suggestion](#Feature Suggestion)
 
-## Security Report
+### Security Report
 
 If you find a security vulnerability, *do NOT open an issue*. Email ProjectCPLC@gmail.com with all the relevant details instead. This is crucial in maintaining the security of users as well as the trust of the project as a safe learning tool. 
 
