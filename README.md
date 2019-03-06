@@ -70,12 +70,44 @@ An interpeter is needed to actually be able to run any of the CPLC files. The fi
 
 + **[Not Started] Create the Interpreter program and all necessary flags and settings**
 
+As other versions of the CPLC language may defined in the future so may the interpreter be expanded to include them.
 
 ### Compiler
 
+The compiler will follow directly from the interpreter. Initially the compiler will just be a "transpiler", converting the CPLC file to a C++ file which can then in tern be compiled by a standard C++ compiler. This transpiler will suffice temporarily to allow for hardware implimentations of the code. After hardware implimentations have been tested, I plan to create an actual compiler using [LLVM](https://llvm.org/). No attempt will be made to write a full compiler from the ground up.
+
+#### Progress [Not Started] -> [In Progress] -> [Completed] -> [Validated]
+
++ **[Not Started] Adapt the tokenizer, parser, syntax and debugging tools for compiling**
+
++ **[Not Started] Create a scribe to write the C++ file**
+
++ **[Not Started] Adapt the wirer to write to the C++ file**
+
+Sometime later...
+
++ **[Not Started] Write a compiler using LLVM**
+
+For most itial implimentations and validation the transpiler should suffice.
+
 ### Raspberry Pi Implimentation
 
+Raspberry Pi's are one of the most ubiquitous mini computers, particularly in the education and hacking worlds. Because of its wide support, minimal cost, and I/O capabilities I believe it would be an ideal device to bring CPLC support to. As the Pi already compiles and runs C++ this will likely come down to mapping the GPIO outputs to I/O's within the program. Initially I will likely require 3rd party libraries such as [WiringPi](http://wiringpi.com/) to get full use of the GPIO. 
+
+#### Progress [Not Started] -> [In Progress] -> [Completed] -> [Validated]
+
++ **[Not Started] Add Pi GPIo support to the interpreter**
+
++ **[Not Started] Add Pi GPIO support to the compiler**
+
 ### Arduino Implimentation
+
+Arduno's are similarly one of the most ubiquitous microcontrollers. It also has wide support, minimal cost (particularly for 3rd part clones), and I/O capabilities so it too would be an ideal device to bring CPLC support to. It will likely come down to simply mapping the GPIO outputs the I/O's within the program and may require libraries. Because the arudino is a microcontroller, it cannot run the interpreter and must use the compiler.
+
+
+#### Progress [Not Started] -> [In Progress] -> [Completed] -> [Validated]
+
++ **[Not Started] Add Arduino GPIO support to the compiler**
 
 ### Application
 
