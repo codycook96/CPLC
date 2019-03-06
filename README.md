@@ -111,7 +111,11 @@ Arduno's are similarly one of the most ubiquitous microcontrollers. It also has 
 
 ### Application
 
+A graphical user application is a part of the broad goal of CPLC in making PLC programming more accessible, however it will not be defined until the language is working and validated on hardware devices.
+
 ### Converter
+
+Similar to the graphical user application the file converters will not be explored until the CPLC is working and validated on hardware devices, as well as verified as legal within the Terms and Conditions of each file type as specified by their owners.
 
 
 
