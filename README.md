@@ -2,9 +2,9 @@
 
 *The Open PLC Development Platform*
 
----
-
 [1] [Changelog](/CHANGELOG.md) [2] [Testing Reports](/Testing/TESTING.md) [3] [Contributing Guidelines](/CONTRIBUTING.md) [4] [License](/License) 
+
+---
 
 ## Mission
 
