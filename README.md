@@ -30,15 +30,17 @@ Structured Text, Sequential Function Chart (textual), Ladder Diagram, Function B
 
 #### Progress
 
-**[ ] Create a CPLC-LD Outline detailing the broad nature of the language according to the IEC 61131-3 standards**
+**[  ] Create a CPLC-LD Outline detailing the broad nature of the language according to the IEC 61131-3 standards**
 
-**[ ] Define all CPLC-LD tokens to be parsed by the compiler and interpreter**
+**[  ] Define all CPLC-LD tokens to be parsed by the compiler and interpreter**
 
-**[ ] Define all CPLC-LD syntactical rules**
+**[  ] Define all CPLC-LD syntactical rules**
 
-**[ ] Define a CPLC-LD flow diagram for how programs will compiled and ran**
+**[  ] Define a CPLC-LD flow diagram for how programs will compiled and ran**
 
-**[ ] Compile all of this information in a CPLC-LD Standards Document**
+**[  ] Compile all of this information in a CPLC-LD Standards Document**
+
+The above will initially be only for the CPLC-LD Ladder Diagram version of the CPLC language, howver time permitting the others may be implimented as well.
 
 ### Interpreter
 
