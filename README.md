@@ -31,7 +31,7 @@ The PLC Project is an open source project aims to create a free, simple, and mod
 
 ### Raspberry Pi Implimentation
 
-### Arduino Implimnetation
+### Arduino Implimetation
 
 ### Application
 
