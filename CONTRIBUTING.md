@@ -16,9 +16,13 @@ This is project intended to be a basic platform on which anyone can learn, write
 
 + [Bug Report](#Bug-Report) 
 
++ [Code Improvement](#Code-Improvement) 
+
 + [Documentation Improvement](#Documentation-Improvement) 
 
 + [Feature Suggestion](#Feature-Suggestion)
+
+***
 
 ### Security Report
 
@@ -26,15 +30,17 @@ If you find a security vulnerability, *do NOT open an issue*. Email ProjectCPLC@
 
 If you think you may have found a vulnerability but are unsure, remember the C.I.A. anacronysm:
 
->-Can I jeopardize **confidential** information? E.g. revealing a users password.
++ Can I jeopardize **confidential** information? E.g. revealing a users password.
 
->-Can I jeopardize the **integrity** of information? E.g. changing a users password.<br/>
++ Can I jeopardize the **integrity** of information? E.g. changing a users password.<br/>
 
->-Can I jeopardize the **accessibility** of information? E.g. prevent users from loggin in.
++ Can I jeopardize the **accessibility** of information? E.g. prevent users from loggin in.
 
 Though this platform will likely never contain a user system these examples allow you to visualize what different security vulnerabilities may look like.
 
 If think you may have found a vulnerability and wish to test it, I suggest using a virtual machine, such as a Linux VirtualBox, and not running the exploit on your personal machine.
+
+---
 
 ### Bug Report
 
