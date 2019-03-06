@@ -58,7 +58,8 @@ When reporting a bug, for your convenience I recomend usng this template:
 **Comments**: *Your code sucks*<br/>
 
 Copy this for your bug report:</br>
->**C++ Version**:<br/>
+```
+**C++ Version**:<br/>
 **Compiler**:<br/>
 **Operating System and Version**:<br/> 
 **What did you do**:<br/>
@@ -66,6 +67,7 @@ Copy this for your bug report:</br>
 **What did you actually see**:<br/>
 **Pastebin link to relevant code**:<br/>
 **Comments**:<br/>
+```
 
 ---
 
@@ -82,13 +84,15 @@ When proposing a code improvement, for your convenience I recomend usng this tem
 **Comments**: *Your coding sucks*<br/>
 
 Copy this for your documentation improvement:<br/>
->**File Name**:
+```
+**File Name**:
 **Object (if applicable)**:
 **Function (if applicable)**:
 **Original Code**:
 **Suggested Revision**:
 **Reason for Revision**:
 **Comments**:
+```
 
 ---
 
@@ -104,12 +108,14 @@ When proposing a documentation improvement, for your convenience I recomend usng
 **Comments**: *Your writing sucks*<br/>
 
 Copy this for your documentation improvement:<br/>
->**Document Name**:
+```
+**Document Name**:
 **Section**:
 **Original Text**:
 **Suggested Revision**:
 **Reason for Revision**:
 **Comments**:
+```
 
 ---
 
@@ -122,7 +128,9 @@ When proposing a feature suggestion, for your convenience I recommned using this
 **Comments**: *Your program sucks... but I want to make it better*<br/>
 
 Copy this for your feature suggestion:<br/>
->**Feature**:
+```
+**Feature**:
 **Description**:
 **Need**:
 **Comments**:
+```
