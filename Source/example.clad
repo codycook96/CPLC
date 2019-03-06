@@ -1,0 +1,8 @@
+//Example of CPLCSim Ladder Logic File
+IN = {DI start, DI reset, AI weight}
+OUT = {DO run}
+VAR = {INT x, INT y, INT z, FLOAT w, FLOAT v, INT[32] a}
+
++---\----[]<start>----\----[/]<stop>----()<run>----+
+    |                 |
+    /----[]<run>------/
