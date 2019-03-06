@@ -50,16 +50,16 @@ An interpeter is needed to actually be able to run any of the CPLC files. The fi
 
 #### Progress [Not Started] -> [In Progress] -> [Completed] -> [Validated]
 
->**[Not Started] Create a tokenizer to interpret and push all tokens onto a program stack**
->**[Not Started] Create a parser to parse the tokens into something similar to an abstract syntax tree**
->**[Not Started] Create syntax checking tool**
->**[Not Started] Create a debugging platform**
->**[Not Started] Create the objects that will represent the different blocks**
->**[Not Started] Create the objects for the hierarchical structures that will hold the blocks**
->**[Not Started] Create the wirer that will be used to connect blocks in the syntax tree**
->**[Not Started] Create the engine that will run the program**
->**[Not Started] Create the I/O mapping tools**
->**[Not Started] Create the Interpreter program and all necessary flags and settings**
+>+**[Not Started] Create a tokenizer to interpret and push all tokens onto a program stack**
+>+**[Not Started] Create a parser to parse the tokens into something similar to an abstract syntax tree**
+>+**[Not Started] Create syntax checking tool**
+>+**[Not Started] Create a debugging platform**
+>+**[Not Started] Create the objects that will represent the different blocks**
+>+**[Not Started] Create the objects for the hierarchical structures that will hold the blocks**
+>+**[Not Started] Create the wirer that will be used to connect blocks in the syntax tree**
+>+**[Not Started] Create the engine that will run the program**
+>+**[Not Started] Create the I/O mapping tools**
+>+**[Not Started] Create the Interpreter program and all necessary flags and settings**
 
 ### Compiler
 
