@@ -28,8 +28,9 @@ The PLC Project is an open source project aims to create a free, simple, and mod
 To fully define the language I will create a CPLC Standard document that will outline the structure, commands, syntax, behaviors and limitations of the CPLC language. This will apply eventually for all types of PLC programming languages: Instruction list,
 Structured Text, Sequential Function Chart (textual), Ladder Diagram, Function Block Diagram, Sequential Function Chart (graphical),  but will initially only define the Ladder Diagram implimentation.
 
-#### Progress [Not Started] -> [In Progress] -> [Completed] -> [Validated]
+#### Progress ([Not Started] -> [In Progress] -> [Completed] -> [Validated])
 
+```
 **[Not Started] Create a CPLC-LD Outline detailing the broad nature of the language according to the IEC 61131-3 standards**
 
 **[Not Started] Define all CPLC-LD tokens to be parsed by the compiler and interpreter**
@@ -39,6 +40,7 @@ Structured Text, Sequential Function Chart (textual), Ladder Diagram, Function B
 **[Not Started] Define a CPLC-LD flow diagram for how programs will compiled and ran**
 
 **[Not Started] Compile all of this information in a CPLC-LD Standards Document**
+```
 
 The above will initially be only for the CPLC-LD Ladder Diagram version of the CPLC language, howver time permitting the others may be implimented as well. With the fully defined CPLC-LD language, and interpeter will be created.
 
@@ -48,25 +50,16 @@ An interpeter is needed to actually be able to run any of the CPLC files. The fi
 
 #### Progress [Not Started] -> [In Progress] -> [Completed] -> [Validated]
 
-**[Not Started] Create a tokenizer to interpret and push all tokens onto a program stack**
-
-**[Not Started] Create a parser to parse the tokens into something similar to an abstract syntax tree**
-
-**[Not Started] Create syntax checking tool**
-
-**[Not Started] Create a debugging platform**
-
-**[Not Started] Create the objects that will represent the different blocks**
-
-**[Not Started] Create the objects for the hierarchical structures that will hold the blocks**
-
-**[Not Started] Create the wirer that will be used to connect blocks in the syntax tree**
-
-**[Not Started] Create the engine that will run the program**
-
-**[Not Started] Create the I/O mapping tools**
-
-**[Not Started] Create the Interpreter program and all necessary flags and settings**
+>**[Not Started] Create a tokenizer to interpret and push all tokens onto a program stack**
+>**[Not Started] Create a parser to parse the tokens into something similar to an abstract syntax tree**
+>**[Not Started] Create syntax checking tool**
+>**[Not Started] Create a debugging platform**
+>**[Not Started] Create the objects that will represent the different blocks**
+>**[Not Started] Create the objects for the hierarchical structures that will hold the blocks**
+>**[Not Started] Create the wirer that will be used to connect blocks in the syntax tree**
+>**[Not Started] Create the engine that will run the program**
+>**[Not Started] Create the I/O mapping tools**
+>**[Not Started] Create the Interpreter program and all necessary flags and settings**
 
 ### Compiler
 
