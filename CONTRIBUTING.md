@@ -1,6 +1,6 @@
 # Contributing to CPLC
 
-### Thank You!
+## Thank You!
 
 Thank you for considering contributing to CPLC. With your help, this project can help educate and make PLC technology more accessible.
 
@@ -8,11 +8,11 @@ Thank you for considering contributing to CPLC. With your help, this project can
 
 ## Preface.
 
-This is project intended to be a basic platform on which anyone can learn, write, and execute PLC programs without needing proprietary software packages or expensive hardware PLC's. This project is intented to be robust, modular, and fast. However, I am a novice developer and my attention unfortunately cannot be dedicated fully to this project. I welcome all contributions and I aim to integrate useful contributions as much as I am able. For the time being, I will be simply taking suggestions and selectively implimenting them myself.
+This is project intended to be a basic platform on which anyone can learn, write, and execute PLC programs without needing proprietary software packages or expensive hardware PLC's. This project is intented to be robust, modular, and fast. However, I am a novice developer and my attention unfortunately cannot be dedicated fully to this project. I welcome all contributions and aim to integrate useful contributions as much as I am able, all that I ask is that expectations are managed. For the time being, I will be simply taking suggestions and selectively implimenting them myself.
 
 ---
 
-### Contributions
+## Contributions
 
 + [Security Report](#Security-Report) 
 
@@ -54,7 +54,7 @@ When reporting a bug, for your convenience I recomend usng this template:
 **What did you do**: *compiled program, ran ladder file, etc*<br/>
 **What did you expect to see**: *succesful compilation, output abc high, etc*<br/>
 **What did you actually see**: *compiler error x, output abc low, etc*<br/>
-**Pastebin link to relevant code**: *https://pastebin.com/*<br/>
+**Problem Code (if applicable)**: *char buff[4] = "overflow me"; *<br/>
 **Comments**: *Your code sucks*<br/>
 
 Copy this for your bug report:</br>
@@ -65,8 +65,8 @@ Operating System and Version:
 What did you do:
 What did you expect to see:
 What did you actually see:
-Pastebin link to relevant code:
-Comments:>
+Problem Code:
+Comments:
 ```
 
 ---
