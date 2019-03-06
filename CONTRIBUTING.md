@@ -59,14 +59,14 @@ When reporting a bug, for your convenience I recomend usng this template:
 
 Copy this for your bug report:</br>
 ```
-**C++ Version**:<br/>
-**Compiler**:<br/>
-**Operating System and Version**:<br/> 
-**What did you do**:<br/>
-**What did you expect to see**:<br/>
-**What did you actually see**:<br/>
-**Pastebin link to relevant code**:<br/>
-**Comments**:<br/>
+C++ Version:
+Compiler:
+Operating System and Version:
+What did you do:
+What did you expect to see:
+What did you actually see:
+Pastebin link to relevant code:
+Comments:>
 ```
 
 ---
@@ -85,13 +85,13 @@ When proposing a code improvement, for your convenience I recomend usng this tem
 
 Copy this for your documentation improvement:<br/>
 ```
-**File Name**:
-**Object (if applicable)**:
-**Function (if applicable)**:
-**Original Code**:
-**Suggested Revision**:
-**Reason for Revision**:
-**Comments**:
+File Name:
+Object (if applicable):
+Function (if applicable):
+Original Code:
+Suggested Revision:
+Reason for Revision:
+Comments:
 ```
 
 ---
@@ -109,12 +109,12 @@ When proposing a documentation improvement, for your convenience I recomend usng
 
 Copy this for your documentation improvement:<br/>
 ```
-**Document Name**:
-**Section**:
-**Original Text**:
-**Suggested Revision**:
-**Reason for Revision**:
-**Comments**:
+Document Name:
+Section:
+Original Text:
+Suggested Revision:
+Reason for Revision:
+Comments:
 ```
 
 ---
@@ -129,8 +129,8 @@ When proposing a feature suggestion, for your convenience I recommned using this
 
 Copy this for your feature suggestion:<br/>
 ```
-**Feature**:
-**Description**:
-**Need**:
-**Comments**:
+Feature:
+Description:
+Need:
+Comments:
 ```
