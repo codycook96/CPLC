@@ -28,7 +28,7 @@ The PLC Project is an open source project aims to create a free, simple, and mod
 To fully define the language I will create a CPLC Standard document that will outline the structure, commands, syntax, behaviors and limitations of the CPLC language. This will apply eventually for all types of PLC programming languages: Instruction list,
 Structured Text, Sequential Function Chart (textual), Ladder Diagram, Function Block Diagram, Sequential Function Chart (graphical),  but will initially only define the Ladder Diagram implimentation.
 
-####Progress
+#### Progress
 
 [ ] 1. Create a CPLC-LD Outline detailing the broad nature of the language according to the IEC 61131-3 standards
 
@@ -54,4 +54,4 @@ Structured Text, Sequential Function Chart (textual), Ladder Diagram, Function B
 
 
 
---
+
