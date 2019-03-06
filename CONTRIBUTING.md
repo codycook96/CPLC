@@ -4,7 +4,7 @@
 
 Thank you for considering contributing to CPLC. With your help, this project can help educate and make PLC technology more accessible.
 
-[Source](https://github.com/codycook96/CPLC/master/CONTRIBUTING.md) [Documentation](https://github.com/codycook96/CPLC/master/) [Website](https://cplcproject.org/) [Donate](https://cplcproject.org/donate/) 
+[Source](https://github.com/codycook96/CPLC/master/CONTRIBUTING.md) [Documentation](https://github.com/codycook96/CPLC/master/) [Website (TBD)](https://github.com/codycook96/CPLC/master/CONTRIBUTING.md) 
 
 ## Preface.
 
@@ -122,6 +122,7 @@ Comments:
 ### Feature Suggestion
 
 When proposing a feature suggestion, for your convenience I recommned using this template:
+
 **Feature**: *GUI Application, File Converter, etc*<br/>
 **Description**: *A graphical user application to write ladder files*<br/>
 **Need**: *It would help users who arent familiar with shell*<br/>
