@@ -13,11 +13,11 @@ The PLC Project is an open source project aims to create a free, simple, and mod
 
 + Creating a C++ based interpreter and compiler for the language [[Interpreter](#Interpreter)] [[Compiler](#Compiler)]
 
-+ Creating tools for running the interpreter and compiled files on common devices such as Raspberry Pi's and Arduino's [[Raspberry Pi](#Raspberry-Pi-Implimentation)] [[Arduino](#Arduino-Implimentation)]
++ Creating tools for running the language Raspberry Pi's and Arduino's [[Raspberry Pi](#Raspberry-Pi-Implimentation)] [[Arduino](#Arduino-Implimentation)]
 
 + Creating a graphical application for creating PLC programs in the language [[Application](#Application)]
 
-+ Creating a converter for industry PLC file types to the language when Terms and Conditions of owning entity allow [[Converter](#Converter)]
++ Creating a converter compatible with industry PLC file types when Terms and Conditions allow [[Converter](#Converter)]
 
 --
 
