@@ -6,11 +6,13 @@ Thank you for considering contributing to CPLC. With your help, this project can
 
 [Source](https://github.com/codycook96/CPLC/master/CONTRIBUTING.md) [Documentation](https://github.com/codycook96/CPLC/master/) [Website](https://cplcproject.org/) [Donate](https://cplcproject.org/donate/) 
 
-### Preface.
+## Preface.
 
 This is project intended to be a basic platform on which anyone can learn, write, and execute PLC programs without needing proprietary software packages or expensive hardware PLC's. This project is intented to be robust, modular, and fast. However, I am a novice developer and my attention unfortunately cannot be dedicated fully to this project. I welcome all contributions and I aim to integrate useful contributions as much as I am able. For the time being, I will be simply taking suggestions and selectively implimenting them myself.
 
-## Contributions
+---
+
+### Contributions
 
 + [Security Report](#Security-Report) 
 
@@ -22,7 +24,7 @@ This is project intended to be a basic platform on which anyone can learn, write
 
 + [Feature Suggestion](#Feature-Suggestion)
 
-***
+---
 
 ### Security Report
 
@@ -65,6 +67,8 @@ Copy this for your bug report:</br>
 **Pastebin link to relevant code**:<br/>
 **Comments**:<br/>
 
+---
+
 ### Code Improvement
 
 When proposing a code improvement, for your convenience I recomend usng this template:
@@ -72,9 +76,9 @@ When proposing a code improvement, for your convenience I recomend usng this tem
 **File Name**: *Test.cpp, Block.h*<br/>
 **Object (if applicable)**: *Block*<br/>
 **Function (if applicable)**: *Block() constructor*<br/>
-**Original Code**: *Block(bool* _tag, bool* _wireIn): tag(_tag), wireIn(_wireIn), wireOut(false){};*
+**Original Code**: *Block(bool* _tag, bool* _wireIn): tag(_tag), wireIn(_wireIn), wireOut(false){};*<br/>
 **Suggested Revision**: *Move function definitions to cpp file*<br/>
-**Reason for Revision**: *Because I like it that way*
+**Reason for Revision**: *Because I like it that way*<br/>
 **Comments**: *Your coding sucks*<br/>
 
 Copy this for your documentation improvement:<br/>
@@ -86,6 +90,8 @@ Copy this for your documentation improvement:<br/>
 **Reason for Revision**:
 **Comments**:
 
+---
+
 ### Documentation Improvement
 
 When proposing a documentation improvement, for your convenience I recomend usng this template:
@@ -94,7 +100,7 @@ When proposing a documentation improvement, for your convenience I recomend usng
 **Section (if applicable)**: *1. Purpose: B) Use Cases*<br/>
 **Original Text (if applicable)**: *This is a text.*<br/>
 **Suggested Revision**: *This is some text, swap section B with section A*<br/>
-**Reason for Revision**: *This is basic grammar.*
+**Reason for Revision**: *This is basic grammar.*<br/>
 **Comments**: *Your writing sucks*<br/>
 
 Copy this for your documentation improvement:<br/>
@@ -104,6 +110,8 @@ Copy this for your documentation improvement:<br/>
 **Suggested Revision**:
 **Reason for Revision**:
 **Comments**:
+
+---
 
 ### Feature Suggestion
 
