@@ -19,7 +19,7 @@ The PLC Project is an open source project aims to create a free, simple, and mod
 
 + Creating a converter compatible with industry PLC file types when Terms and Conditions allow [[Converter](#Converter)]
 
-[1] All information about the IEC-61131-3 is being accessed second hand through *IEC 61131-3: Programming Industrial Automation Systems: Concepts and Programming Languages, Requirements for Programming Systems, Decision-Making Aids* by *Karl-Heinz John and Michael Tiegelkamp*
+[1] All information about the IEC-61131-3 is being accessed second hand through *IEC 61131-3: Programming Industrial Automation Systems: Concepts and Programming Languages, Requirements for Programming Systems, Decision-Making Aids* by Karl-Heinz John and Michael Tiegelkamp
 
 ## Roadmap
 
@@ -28,9 +28,17 @@ The PLC Project is an open source project aims to create a free, simple, and mod
 To fully define the language I will create a CPLC Standard document that will outline the structure, commands, syntax, behaviors and limitations of the CPLC language. This will apply eventually for all types of PLC programming languages: Instruction list,
 Structured Text, Sequential Function Chart (textual), Ladder Diagram, Function Block Diagram, Sequential Function Chart (graphical),  but will initially only define the Ladder Diagram implimentation.
 
-To do so I will accomplish the following:
+####Progress
 
-1.  Produce a CPLC-LD Outline Document detailing the nature of the language according to the IEC 61131-3
+[ ] 1. Create a CPLC-LD Outline detailing the broad nature of the language according to the IEC 61131-3 standards
+
+[ ] 2. Define all CPLC-LD tokens to be parsed by the compiler and interpreter
+
+[ ] 3. Define all CPLC-LD syntactical rules
+
+[ ] 4. Define a CPLC-LD flow diagram for how programs will compiled and ran
+
+[ ] 5. Compile all of this information in a CPLC-LD Standards Document
 
 ### Interpreter
 
