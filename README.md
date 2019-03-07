@@ -13,7 +13,7 @@ The CPLC Project is an open source project aims to create a free, simple, and mo
 
 ## Goals
 
-+ Creating a readable text based PLC language that aligns with [1] IEC 61131-3 [[Language](#Defining-the-Language)]
++ Creating a readable text based PLC language that aligns with IEC 61131-3 [1] [[Language](#Defining-the-Language)]
 
 + Creating a C++ based interpreter and compiler for the language [[Interpreter](#Interpreter)] [[Compiler](#Compiler)]
 
