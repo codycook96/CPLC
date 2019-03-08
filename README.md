@@ -13,7 +13,7 @@ The CPLC Project is an open source project aims to create a free, simple, and mo
 
 ## Goals
 
-+ Creating a readable text based PLC language that aligns with IEC 61131-3 [1] [[Language](#Defining-the-Language)]
++ Creating a readable text based PLC language that generally aligns with IEC 61131-3 [1] [[Language](#Defining-the-Language)]
 
 + Creating a C++ based interpreter and compiler for the language [[Interpreter](#Interpreter)] [[Compiler](#Compiler)]
 
@@ -23,7 +23,7 @@ The CPLC Project is an open source project aims to create a free, simple, and mo
 
 + Creating a converter compatible with industry PLC file types when Terms and Conditions allow [[Converter](#Converter)]
 
-[1] All information about the IEC-61131-3 is being accessed second hand through *IEC 61131-3: Programming Industrial Automation Systems: Concepts and Programming Languages, Requirements for Programming Systems, Decision-Making Aids* by Karl-Heinz John and Michael Tiegelkamp
+[1] This program as of this time does not officially conform to IEC 61131-3 and has not been through any form of conformity assessment. All information about IEC-61131-3 is being accessed second hand through *IEC 61131-3: Programming Industrial Automation Systems: Concepts and Programming Languages, Requirements for Programming Systems, Decision-Making Aids* by Karl-Heinz John and Michael Tiegelkamp
 
 ## Roadmap
 
