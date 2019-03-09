@@ -72,16 +72,16 @@ The elements are the building blocks of the language. They make up every charact
 **Up Connector**: The forwardlash is to be used as a up connector, indicating that at the point in the rung that it appears, there should be a connection to the rung above it. It is to be paired sequentially to a matching down connector from the rung above it. I.E. the third up connector to appear (from left to right) on a rung will be taken as a directly wired connection the the third down connector from the rung above. Similarly to parenthesis in other languages, all up and down connectors must have pairs.
 
 ```[ ... ]( ... , ... )```
-**Logical Block**: A pair of square brackets with a following pair of parenthesis represent a logical block. The square brackets contain any information distinguishing the function of the block, contact, arithemtic, timer, etc. The pair of parenthesis are where arguents to the block are passed such as tag names, arguments, etc.
+**Logical Block**: A pair of square brackets with a following pair of parenthesis represent a logical block. The square brackets contain any information distinguishing the function of the block, contact, arithemtic, timer, etc. The pair of parenthesis are where arguents to the block are passed such as tag names, arguments, etc. The block reads from an enable in, EN, (rung input) and writes to an enable out, ENO, (rung output).
 
 ```( ... )( ... , ... )```
-**Coil Block**: A pair of parenthesis followed by another pair of parenthesis represent a coil block. The first pair of parenthis contain any information distinguishing the function of the coil. The second pair of parenthesis are where arguments to the coil, such as tag name, are passed.
+**Coil Block**: A pair of parenthesis followed by another pair of parenthesis represent a coil block. The first pair of parenthis contain any information distinguishing the function of the coil. The second pair of parenthesis are where arguments to the coil, such as tag name, are passed. The block reads from an enable in, EN, (rung input) and writes to an enable out, ENO (rung output).
 
 ```< ... >( ... , ... )```
-**Function Block**: A less-than and greater-than symbol followed by a pair of parenthesis represent a function block. The less-than and greater-than sign contain any information distinguishing the function block. the pair of parenthsis are where arguments to the function block, such as function block to call or return condition, are passed.
+**Function Block**: A less-than and greater-than symbol followed by a pair of parenthesis represent a function block. The less-than and greater-than sign contain any information distinguishing the function block. the pair of parenthsis are where arguments to the function block, such as function block to call or return condition, are passed. The block reads from an enable in, EN, (rung input) and writes to an enable out, ENO (rung output).
 
 ```> ... >( ... , ...)```
-**Jump Block**: A pair of two greater-than symbols followed by a pair of parenthesis represent a jump block. The two greater-than symbols contain any information distinguishing the jump block. The pair of parenthesis are where arguments to the jump block, such as location and condition, are passed.
+**Jump Block**: A pair of two greater-than symbols followed by a pair of parenthesis represent a jump block. The two greater-than symbols contain any information distinguishing the jump block. The pair of parenthesis are where arguments to the jump block, such as location and condition, are passed. The block reads from an enable in, EN, (rung input) and writes to an enable out, ENO (rung output).
 
 ```#{ ... }```
 **Comment Block**: A pound symbol with brackets may be used as a comment block. All normal tect to appear within the brackets will not be compiled or executed on and left simply as a comment. This may be used to write an inline comment where code continues after the comment or as a multiline comment.
@@ -89,6 +89,17 @@ The elements are the building blocks of the language. They make up every charact
 ### Blocks
 
 #### Logical Blocks
+
+```[ ]( tag )```
+**Normally Open Contact**: a single space in the logcal block indicates a normally open contact. The normally open contact takes a single parameter: a tag which controls the switching function of the contact: when the tag is logical high and the enable in, EN, (input side of the rung) is also logical high then the enable out, ENO, (output side of the rung) becomes high.
+
+```[/]( tag )```
+**Normally Closed Contact**: a forward slash in the logical block indicates a normally closed contact. The normally closed contact takes a single parameter: a tag which controls the switching function of the contact: when the tag is logical low and the enable in, EN, (input side of the rung) is logical high then the enable out, ENO, (output side of the rung) becomes high.
+
+```[P]( tag )```
+**Positive Edge Contact**: a capital or lowercase 'p' in the logical block indicates a positive edge detecting contact. The positive edge contact takes a single parameter of a tag which controls the switching of the contact: when the the tag has become high in the last cycle of operation and the enable in, EN, (input side of the rung) is high then the enable out, ENO, (output side of the rung) becomes true. After one cycle, the enable out, ENO, is set to false.
+
+
 
 #### Coil Blocks
 
