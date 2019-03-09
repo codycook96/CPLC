@@ -48,7 +48,9 @@ The elements are the building blocks of the language. They make up every charact
 
 + **Delimiters**: special characters that are used to separate and distinguish other data. 
 
-+ **Keywords**:  the set of all meaningful combinations of characters and words that may make up data types, function names and more.
++ **Blocks**: the set of all blocks that can be created with the allowed block delimiter shapes.
+
++ **Keywords**:  the set of all meaningful combinations of characters and words that may make up data types and more.
 
 + **Literals**: characters or words to be interpreted as literal data values such as an integer number.
 
@@ -88,6 +90,13 @@ The elements are the building blocks of the language. They make up every charact
 
 #### Logical Blocks
 
+#### Coil Blocks
+
+#### Function Blocks
+
+#### Jump Blocks
+
+#### Comment Blocks
 
 ### Keywords
 
