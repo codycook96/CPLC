@@ -32,9 +32,17 @@ The language ultimately we be implimented so that newcomers to the field as well
 
 ## Elements
 
+The elements are the building blocks of the language. They make up every character and combination of characters that can meanifully be used in the langueage. They are separated into: 
 
++ **Delimiters**: special characters that are used to separate and distinguish other data. 
+
++ **Keywords**:  the set of all meaningful combinations of characters and words that may make up data types, function names and more.
+
++ **Literals**: characters or words to be interpreted as literal data values such as an integer number.
 
 ### Delimiters
+
++ **-**
 
 ### Keywords
 
