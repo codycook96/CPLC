@@ -8,7 +8,9 @@
 
 + [**Outline**](#Outline)
 
-+ [**Elements**](#Tokens)
++ [**Elements**](#Elements)
+
+++ [**Literals**](#Literals)
 
 + [**Syntax**](#Syntax)
 
