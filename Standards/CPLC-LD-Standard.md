@@ -43,7 +43,7 @@ The elements are the building blocks of the language. They make up every charact
 ### Delimiters
 
 ```-```
-**Rung**: The dash is to be used as a wire or rung of the ladder program. Though it is not necessary to have a dash between objects to have them "connect" it is useful in separating different blocks and making the diagram more readable. Many dashes are intended to be used as wirign, or a form of "whitespace", between objects.
+**Rung**: The dash is to be used as a wire or rung of the ladder program. A section of rung is needed both to distinguish different logical elements that exist on a rung and to separate blocks with a certain amount of space so they are more easily readable.
 
 ```|```
 **Rail** The pipe symbol may be used as a part of the vertical rails on either side of the ladder program. While this might be useful to help visualize the rail particularly when separating rows, it is by all meants not necessary. Rungs may be right on top of each other using only the rail or up and down connectors without needing a rail, and they may also simply be separated by empty lines.
@@ -63,7 +63,17 @@ The elements are the building blocks of the language. They make up every charact
 ```#{ ... }```
 **Block Comment**: A pound symbol with brackets may be used as a comment block. All normal tect to appear within the brackets will not be compiled or executed on and left simply as a comment. This may be used to write an inline comment where code continues after the comment or as a multiline comment.
 
+```[ ... ]( ... , ... )```
+**Logical Block**: A pair of square brackets with a following pair of parenthesis represent a logical block. The square brackets contain any information distinguishing the function of the block, contact, arithemtic, timer, etc. The pair of parenthesis are where arguents to the block are passed such as tag names, arguments, etc.
 
+```( ... )( ... , ... )```
+**Coil Block**: A pair of parenthesis followed by another pair of parenthesis represent a coil block. The first pair of parenthis contain any information distinguishing the function of the coil. The second pair of parenthesis are where arguments to the coil, such as tag name, are passed.
+
+```< ... >( ... , ... )```
+**Function Block**: A less-than and greater-than symbol followed by a pair of parenthesis represent a function block. The less-than and greater-than sign contain any information distinguishing the function block. the pair of parenthsis are where arguments to the function block, such as function block to call or return condition, are passed.
+
+```> ... >( ... , ...)```
+**Jump Block**: A pair of two greater-than symbols followed by a pair of parenthesis represent a jump block. The two greater-than symbols contain any information distinguishing the jump block. The pair of parenthesis are where arguments to the jump block, such as location and condition, are passed.
 
 
 
