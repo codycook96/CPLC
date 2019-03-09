@@ -10,7 +10,7 @@
 
 + [**Elements**](#Elements)
 
-++ [**Literals**](#Literals)
+  + [**Literals**](#Literals)
 
 + [**Syntax**](#Syntax)
 
