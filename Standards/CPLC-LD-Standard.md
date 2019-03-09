@@ -42,7 +42,14 @@ The elements are the building blocks of the language. They make up every charact
 
 ### Delimiters
 
-+ **-**
+```-```
+The dash is to be used as a wire or rung of the ladder program. Though it is not necessary to have a dash between objects to have them "connect" it is useful in separating different blocks and making the diagram more readable.
+
+```\```
+The backslash is to be used as a down connector, indicating that at the point in the rung that it appears, there should be a connection to the rung below it. It is to be paired sequentially to a matching up connector from the rung below it. I.E. the third down connector to appear (from left to right) on a rung will be taken as a directly wired connection the the third up connector from the rung below. Similarly to parenthesis in other languages, all up and down connectors must have pairs.
+
+```/```
+The forwardlash is to be used as a up connector, indicating that at the point in the rung that it appears, there should be a connection to the rung above it. It is to be paired sequentially to a matching down connector from the rung above it. I.E. the third up connector to appear (from left to right) on a rung will be taken as a directly wired connection the the third down connector from the rung above. Similarly to parenthesis in other languages, all up and down connectors must have pairs.
 
 ### Keywords
 
