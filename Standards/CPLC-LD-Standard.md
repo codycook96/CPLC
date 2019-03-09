@@ -43,7 +43,7 @@ The elements are the building blocks of the language. They make up every charact
 ### Delimiters
 
 ```-```
-**Eung**: The dash is to be used as a wire or rung of the ladder program. Though it is not necessary to have a dash between objects to have them "connect" it is useful in separating different blocks and making the diagram more readable. Many dashes are intended to be used as wirign, or a form of "whitespace", between objects.
+**Rung**: The dash is to be used as a wire or rung of the ladder program. Though it is not necessary to have a dash between objects to have them "connect" it is useful in separating different blocks and making the diagram more readable. Many dashes are intended to be used as wirign, or a form of "whitespace", between objects.
 
 ```|```
 **Rail** The pipe symbol may be used as a part of the vertical rails on either side of the ladder program. While this might be useful to help visualize the rail particularly when separating rows, it is by all meants not necessary. Rungs may be right on top of each other using only the rail or up and down connectors without needing a rail, and they may also simply be separated by empty lines.
