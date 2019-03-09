@@ -12,6 +12,8 @@
 
   + [**Delimiters**](#Delimiters)
   
+  + [**Blocks**](#Blocks)
+  
   + [**Keywords**](#Keywords)
   
   + [**Literals**](#Literals)
@@ -71,6 +73,8 @@ The elements are the building blocks of the language. They make up every charact
 
 ```> ... >( ... , ...)```
 **Jump Block**: A pair of two greater-than symbols followed by a pair of parenthesis represent a jump block. The two greater-than symbols contain any information distinguishing the jump block. The pair of parenthesis are where arguments to the jump block, such as location and condition, are passed.
+
+### Blocks
 
 
 
