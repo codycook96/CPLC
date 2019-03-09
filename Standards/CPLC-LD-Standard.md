@@ -91,17 +91,21 @@ The elements are the building blocks of the language. They make up every charact
 #### Logical Blocks
 
 ```[ ]( tag )```
-**Normally Open Contact**: a single space in the logcal block indicates a normally open contact. The normally open contact takes a single parameter: a tag which controls the switching function of the contact: when the tag is logical high and the enable in, EN, (input side of the rung) is also logical high then the enable out, ENO, (output side of the rung) becomes high.
+**Normally Open Contact**: a single space in the logcal block indicates a normally open contact. The normally open contact takes a single parameter: a tag which controls the switching function of the contact: when the tag is logical high and the enable in, EN, is also logical high then the enable out, ENO, becomes high and when the tag is low the enable out, ENO, is always low.
 
 ```[/]( tag )```
-**Normally Closed Contact**: a forward slash in the logical block indicates a normally closed contact. The normally closed contact takes a single parameter: a tag which controls the switching function of the contact: when the tag is logical low and the enable in, EN, (input side of the rung) is logical high then the enable out, ENO, (output side of the rung) becomes high.
+**Normally Closed Contact**: a forward slash in the logical block indicates a normally closed contact. The normally closed contact takes a single parameter: a tag which controls the switching function of the contact: when the tag is logical low and the enable in, EN, is logical high then the enable out, ENO, becomes high and if the tag is logical high the enable out is always low.
 
 ```[P]( tag )```
-**Positive Edge Contact**: a capital or lowercase 'p' in the logical block indicates a positive edge detecting contact. The positive edge contact takes a single parameter of a tag which controls the switching of the contact: when the the tag has become high in the last cycle of operation and the enable in, EN, (input side of the rung) is high then the enable out, ENO, (output side of the rung) becomes true. After one cycle, the enable out, ENO, is set to false.
+**Positive Edge Contact**: a capital or lowercase 'p' in the logical block indicates a positive edge detecting contact. The positive edge contact takes a single parameter of a tag which controls the switching of the contact: when the tag has become high in the last cycle of operation and the enable in, EN, is high then the enable out, ENO, becomes true. After one cycle, the enable out, ENO, is set to false and will remain false until the tag transitions to high after being low again.
 
-
+```[N]( tag )```
+**Negative Edge Contact**: a capital or lowercase 'n' in the logical block indicates a negative edge detecting contact. The positive edge contact takes a single parameter of a tag which controls the swithcing of the contact: when the tag has become low in the last cycle of operation and the enable in, EN, is high then the enable out, ENO, becomes true. After one cycle the enable out, ENO, is set to false and will remain false until the tag transitions to low after being high again.
 
 #### Coil Blocks
+
+```( )( tag )```
+**Output Coil**: a space in the coil block indicates an output coil. The output coil takes a single parameter of a tag which is controlled by the enable in, EN: when the enable in, EN, becomes high, both the tag and enable out, ENO, become high, when the enable becomes low, both tag and enable out, ENO, become low.
 
 #### Function Blocks
 
