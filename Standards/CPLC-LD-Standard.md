@@ -14,6 +14,16 @@
   
   + [**Blocks**](#Blocks)
   
+    + [**Logical Blocks**](#Logical-Blocks)
+    
+    + [**Coil Blocks**](#Coil-Blocks)
+    
+    + [**Function Blocks**](#Function-Blocks)
+    
+    + [**Jump Blocks**](#Jump-Blocks)
+    
+    + [**Comment Blocks**](#Comment-Blocks)
+  
   + [**Keywords**](#Keywords)
   
   + [**Literals**](#Literals)
@@ -59,9 +69,6 @@ The elements are the building blocks of the language. They make up every charact
 ```/```
 **Up Connector**: The forwardlash is to be used as a up connector, indicating that at the point in the rung that it appears, there should be a connection to the rung above it. It is to be paired sequentially to a matching down connector from the rung above it. I.E. the third up connector to appear (from left to right) on a rung will be taken as a directly wired connection the the third down connector from the rung above. Similarly to parenthesis in other languages, all up and down connectors must have pairs.
 
-```#{ ... }```
-**Comment Block**: A pound symbol with brackets may be used as a comment block. All normal tect to appear within the brackets will not be compiled or executed on and left simply as a comment. This may be used to write an inline comment where code continues after the comment or as a multiline comment.
-
 ```[ ... ]( ... , ... )```
 **Logical Block**: A pair of square brackets with a following pair of parenthesis represent a logical block. The square brackets contain any information distinguishing the function of the block, contact, arithemtic, timer, etc. The pair of parenthesis are where arguents to the block are passed such as tag names, arguments, etc.
 
@@ -74,8 +81,12 @@ The elements are the building blocks of the language. They make up every charact
 ```> ... >( ... , ...)```
 **Jump Block**: A pair of two greater-than symbols followed by a pair of parenthesis represent a jump block. The two greater-than symbols contain any information distinguishing the jump block. The pair of parenthesis are where arguments to the jump block, such as location and condition, are passed.
 
+```#{ ... }```
+**Comment Block**: A pound symbol with brackets may be used as a comment block. All normal tect to appear within the brackets will not be compiled or executed on and left simply as a comment. This may be used to write an inline comment where code continues after the comment or as a multiline comment.
+
 ### Blocks
 
+#### Logical Blocks
 
 
 ### Keywords
