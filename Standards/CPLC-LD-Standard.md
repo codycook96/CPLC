@@ -12,7 +12,7 @@
 
   + [**Delimiters**](#Delimiters)
   
-  + [**Keywords*](#Keywords)
+  + [**Keywords**](#Keywords)
   
   + [**Literals**](#Literals)
 
