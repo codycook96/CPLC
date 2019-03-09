@@ -10,6 +10,10 @@
 
 + [**Elements**](#Elements)
 
+  + [**Delimiters**](#Delimiters)
+  
+  + [**Keywords*](#Keywords)
+  
   + [**Literals**](#Literals)
 
 + [**Syntax**](#Syntax)
