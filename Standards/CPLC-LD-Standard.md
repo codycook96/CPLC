@@ -123,7 +123,7 @@ The elements are the building blocks of the language. They make up every charact
 #### Function Blocks
 
 ```<LBL>( label )```
-**Jump Label**: a capital or lowercase "LBL" in a function block indicates an jump label. The label takes a single parameter: a label name. When a the enable-in on a conditional or unconditional jump with the same label becomes high, the program immediately starts executing at the rung with that label, skipping the rungs that would normally be reached before it. If there are multiple labels of the same name defined, the closest one after the called jump.
+**Label**: a capital or lowercase "LBL" in a function block indicates an jump label. The label takes a single parameter: a label name. When a the enable-in on a conditional or unconditional jump with the same label becomes high, the program immediately starts executing at the rung with that label, skipping the rungs that would normally be reached before it. If there are multiple labels of the same name defined, the closest one after the called jump.
 
 ```<JMP>( label )```
 **Jump**: a capital or lowercase "JMP" in a function block with a single parameter indicates an jump. The jump takes a single parameter: a label name. When enable-in becomes high the program will stop executing the current rung and jump to the closest label of the same name.
