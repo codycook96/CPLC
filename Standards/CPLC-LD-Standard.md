@@ -72,16 +72,16 @@ The elements are the building blocks of the language. They make up every charact
 **Up Connector**: The forwardlash is to be used as a up connector, indicating that at the point in the rung that it appears, there should be a connection to the rung above it. It is to be paired sequentially to a matching down connector from the rung above it. I.E. the third up connector to appear (from left to right) on a rung will be taken as a directly wired connection the the third down connector from the rung above. Similarly to parenthesis in other languages, all up and down connectors must have pairs.
 
 ```[ ... ]( ... , ... )```
-**Logical Block**: A pair of square brackets with a following pair of parenthesis represent a logical block. The square brackets contain any information distinguishing the function of the block, contact, arithemtic, timer, etc. The pair of parenthesis are where arguents to the block are passed such as tag names, arguments, etc. The block reads from an enable in, EN, (rung input) and writes to an enable out, ENO, (rung output).
+**Logical Block**: A pair of square brackets with a following pair of parenthesis represent a logical block. The square brackets contain any information distinguishing the function of the block, contact, arithemtic, timer, etc. The pair of parenthesis are where arguents to the block are passed such as tag names, arguments, etc. The block reads from an enable-in, EN, (rung input) and writes to an enable-out, ENO, (rung output).
 
 ```( ... )( ... , ... )```
-**Coil Block**: A pair of parenthesis followed by another pair of parenthesis represent a coil block. The first pair of parenthis contain any information distinguishing the function of the coil. The second pair of parenthesis are where arguments to the coil, such as tag name, are passed. The block reads from an enable in, EN, (rung input) and writes to an enable out, ENO (rung output).
+**Coil Block**: A pair of parenthesis followed by another pair of parenthesis represent a coil block. The first pair of parenthis contain any information distinguishing the function of the coil. The second pair of parenthesis are where arguments to the coil, such as tag name, are passed. The block reads from an enable-in, EN, (rung input) and writes to an enable-out, ENO (rung output).
 
 ```< ... >( ... , ... )```
-**Function Block**: A less-than and greater-than symbol followed by a pair of parenthesis represent a function block. The less-than and greater-than sign contain any information distinguishing the function block. the pair of parenthsis are where arguments to the function block, such as function block to call or return condition, are passed. The block reads from an enable in, EN, (rung input) and writes to an enable out, ENO (rung output).
+**Function Block**: A less-than and greater-than symbol followed by a pair of parenthesis represent a function block. The less-than and greater-than sign contain any information distinguishing the function block. the pair of parenthsis are where arguments to the function block, such as function block to call or return condition, are passed. The block reads from an enable-in, EN, (rung input) and writes to an enable-out, ENO (rung output).
 
 ```> ... >( ... , ...)```
-**Jump Block**: A pair of two greater-than symbols followed by a pair of parenthesis represent a jump block. The two greater-than symbols contain any information distinguishing the jump block. The pair of parenthesis are where arguments to the jump block, such as location and condition, are passed. The block reads from an enable in, EN, (rung input) and writes to an enable out, ENO (rung output).
+**Jump Block**: A pair of two greater-than symbols followed by a pair of parenthesis represent a jump block. The two greater-than symbols contain any information distinguishing the jump block. The pair of parenthesis are where arguments to the jump block, such as location and condition, are passed. The block reads from an enable-in, EN, (rung input) and writes to an enable-out, ENO (rung output).
 
 ```#{ ... }```
 **Comment Block**: A pound symbol with brackets may be used as a comment block. All normal tect to appear within the brackets will not be compiled or executed on and left simply as a comment. This may be used to write an inline comment where code continues after the comment or as a multiline comment.
@@ -90,22 +90,37 @@ The elements are the building blocks of the language. They make up every charact
 
 #### Logical Blocks
 
-```[ ]( tag )```
-**Normally Open Contact**: a single space in the logcal block indicates a normally open contact. The normally open contact takes a single parameter: a tag which controls the switching function of the contact: when the tag is logical high and the enable in, EN, is also logical high then the enable out, ENO, becomes high and when the tag is low the enable out, ENO, is always low.
+```[ ]( bool gate )```
+**Normally Open Contact**: a single space in the logcal block indicates a normally open contact. The normally open contact takes a single parameter: a boolean switch tag that controls the switching function of the contact. When the switch tag is high and the enable-in is high, the enable-out becomes high, and when gate is low the enable-out is always low.
 
-```[/]( tag )```
-**Normally Closed Contact**: a forward slash in the logical block indicates a normally closed contact. The normally closed contact takes a single parameter: a tag which controls the switching function of the contact: when the tag is logical low and the enable in, EN, is logical high then the enable out, ENO, becomes high and if the tag is logical high the enable out is always low.
+```[/]( bool gate )```
+**Normally Closed Contact**: a forward slash in the logical block indicates a normally closed contact. The normally closed contact takes a single parameter: a boolean switch tag that controls the switching function of the contact. When gate is low and the enable-in is high, the enable-out becomes high, and when gate is high the enable-out is always low.
 
-```[P]( tag )```
-**Positive Edge Contact**: a capital or lowercase 'p' in the logical block indicates a positive edge detecting contact. The positive edge contact takes a single parameter of a tag which controls the switching of the contact: when the tag has become high in the last cycle of operation and the enable in, EN, is high then the enable out, ENO, becomes true. After one cycle, the enable out, ENO, is set to false and will remain false until the tag transitions to high after being low again.
+```[P]( bool gate )```
+**Positive Edge Contact**: a capital or lowercase 'p' in the logical block indicates a positive edge detecting contact. The positive edge contact takes a single parameter: a boolean gate tag that controls the switching of the contact. When gate has become high in the last cycle of operation and the enable-in is high, then the enable-out becomes high. After one cycle, the enable-out becomes low and will remain low until the tag transitions to high after being low again.
 
-```[N]( tag )```
-**Negative Edge Contact**: a capital or lowercase 'n' in the logical block indicates a negative edge detecting contact. The positive edge contact takes a single parameter of a tag which controls the swithcing of the contact: when the tag has become low in the last cycle of operation and the enable in, EN, is high then the enable out, ENO, becomes true. After one cycle the enable out, ENO, is set to false and will remain false until the tag transitions to low after being high again.
+```[N]( bool gate )```
+**Negative Edge Contact**: a capital or lowercase 'n' in the logical block indicates a negative edge detecting contact. The positive edge contact takes a single parameter: a boolean gate tag that controls the swithcing of the contact. When gate has become low in the last cycle of operation and the enable-in is high, then the enable-out becomes high. After one cycle, the enable out becomes low and will remain low until the tag transitions to low after being high again.
 
 #### Coil Blocks
 
-```( )( tag )```
-**Output Coil**: a space in the coil block indicates an output coil. The output coil takes a single parameter of a tag which is controlled by the enable in, EN: when the enable in, EN, becomes high, both the tag and enable out, ENO, become high, when the enable becomes low, both tag and enable out, ENO, become low.
+```( )( bool set )```
+**Output Coil**: a space in the coil block indicates an output coil. The output coil takes a single parameter: a boolean set tag that is controlled by enable-in. When enable-in becomes high, both set tag and enable-out become high, when enable-in becomes low, both tag and enable-out become low.
+
+```(S)( bool set )```
+**Set Coil**: a capital or lowercase 's' in the coil block indicates a set coil. The set coil takes a single parameter: a boolean set tag that is controlled by the enable-in. When the enable-in becomes high, both the set tag and enable-out become high and both stay high until the reset coil using the same tag becomes high. 
+
+```(R)( bool set )```
+**Reset Coil**: a capital or lowercase 'r' in the coil block indicates a reset coil. The reset coil takes a single parameter: a boolean set tag that is controlled by the enable-in. When the enable-in becomes high, both the set tag and enable-out become high and any set tag coils with the same tag name are reset to low.
+
+```(M)( bool set )```
+**Retentative Memory Coil**: a capital or lowercase 'm' in a coil block indicates a retentative memory coil. The retentative memory coil takes a single parameter: a boolean set tag that is controlled by enable-in. When enable-in becomes high, both set tag and enable-out become high, when enable-in becomes low, both tag and enable-out become low. The coil retains its value even if the program is reset. This block may not realizable on some machines.
+
+```(SM)( name )```
+**Set Retentative Memory Coil**: a capital or lowercase 'sm' in the coil block indicates a set retentative memory coil. The set retentative memory coil takes a single parameter: a boolean set tag that is controlled by the enable-in. When the enable-in becomes high, both the set tag and enable-out become high and both stay high until the reset coil using the same tag name becomes high. The coil retains its value even if the program is reset. This block may not realizable on some machines.
+
+```(RM)( name )```
+**Reset Retentative Memory Coil**: a capital or lowercase 'rm' in the coil block indicates a reset retentative memory coil. The reset retentative memory coil takes a single parameter: a boolean set tag that is controlled by the enable-in. When the enable-in becomes high, both the set tag and enable-out become high and any set tag coils with the same tag name are reset to low.  The coil retains its value even if the program is reset. This block may not realizable on some machines.
 
 #### Function Blocks
 
