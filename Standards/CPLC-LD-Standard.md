@@ -21,6 +21,8 @@
     + [**Function Blocks**](#Function-Blocks)
     
     + [**Comment Blocks**](#Comment-Blocks)
+    
+    + [**User-Defined Blocks**](#User-Defined-Blocks)
   
   + [**Keywords**](#Keywords)
   
@@ -171,6 +173,8 @@ The elements are the building blocks of the language. They make up every charact
 
 ```# Comment #```
 **Comment Block**: a pair of pound symbols make up a comment block. Any text that appears between the two pound symbols will not be executed on and enable sigals pass as if the comment were a rung. Comments can span multiple lines and cannot be nested (i.e. any pound symbol will escape the comment started by any other pound symbol). Comments can then can be wrapped around rungs or certain parts of a rung to prevent them from being executed.
+
+#### User-Defined Blocks
 
 ### Keywords
 
