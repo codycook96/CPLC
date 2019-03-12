@@ -79,7 +79,7 @@ The elements are the building blocks of the language. They make up every charact
 **Function Block**: A less-than and greater-than symbol followed by a pair of parenthesis represent a function block. The less-than and greater-than sign contain any information distinguishing the function block. the pair of parenthsis are where arguments to the function block, such as function block to call or return condition, are passed. The block reads from an enable-in, EN, (rung input) and writes to an enable-out, ENO (rung output).
 
 ```# ... #```
-**Comment Block**: A pound symbol with brackets may be used as a comment block. All normal tect to appear within the brackets will not be compiled or executed on and left simply as a comment. This may be used to write an inline comment where code continues after the comment or as a multiline comment.
+**Comment Block**: A pair of pound symbolsmay be used as a comment block. All normal tect to appear within the brackets will not be compiled or executed on and left simply as a comment. This may be used to write an inline comment where code continues after the comment or as a multiline comment.
 
 ### Blocks
 
@@ -169,7 +169,7 @@ The elements are the building blocks of the language. They make up every charact
 #### Comment Blocks
 
 ```#Comment#```
-**Comment Block**: a pair of pound symbols make up a comment block. Any text that appears between the two pound symbols will not be executed on and enable sigals pass as if the comment were a rung. Comments can span multiple lines and cannot be nested (i.e. any pound symbol will escape the comment started by any other pound symbol).
+**Comment Block**: a pair of pound symbols make up a comment block. Any text that appears between the two pound symbols will not be executed on and enable sigals pass as if the comment were a rung. Comments can span multiple lines and cannot be nested (i.e. any pound symbol will escape the comment started by any other pound symbol). Comments can then can be wrapped around rungs or certain parts of a rung to prevent them from being executed.
 
 ### Keywords
 
