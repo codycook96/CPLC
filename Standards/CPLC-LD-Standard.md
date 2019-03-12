@@ -104,10 +104,16 @@ The elements are the building blocks of the language. They make up every charact
 **Inverter**: a capital or lowercase "NOT" in a logical block indicates an inverter. The inverter takes no parameters. When enable-in becomes high, enable-out becomes low and when enable-in becomes low, enable-out becomes high.
 
 ```[TYP]( outputY, inputA)```
-**Type Converter**: a capital or lowercase "TYP" in a logical block indicates a type converter. The type converter takes two parameters: the first being a tag of one type to be written to and the second being being a tag of a another type containing the value to be converted and written. NOT DONE
+**Type Converter**: a capital or lowercase "TYP" in a logical block indicates a type converter. The type converter takes two parameters: the first being a tag of one type to be written to and the second being being a tag of a another type containing the value to be converted and written. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true.
 
 ```[MOV]( outputY, inputA )```
-**Move/Assignement**: a capital or lowercase "MOV" in a logical block indicates a move/assignment block. The move/assignment block takes two parameters: the first being the tag being written to and the second being the tag containing the value to be written. Both tags must be of the same type. NOT DONE
+**Move/Assignement**: a capital or lowercase "MOV" in a logical block indicates a move/assignment block. The move/assignment block takes two parameters: the first being the tag being written to and the second being the tag containing the value to be written. Both tags must be of the same type. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. *Y = A*
+
+```[ADD]( outputY, inputA, inputB, ... )```
+**Addition**: a capital or lowercase "ADD" in a logical block indates an addition block. The addition block takes at least two parameters: the first being the tag where the final sum will be written to and the second and all thereafter being the tags that will be added together to produce a sum. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. *Y = A + B + ... *
+
+```[SUB]( outputY, inputA, inputB, ... )```
+**Subtraction**: a capital or lowercase "SUB" in a logical block indates a subtraction block. The subtraction block takes at least three parameters: the first being the tag where the final difference will be written, the second being the tag to be subtracted from, and the third and all thereafter being the tags that will subtract. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. *Y = A - B - C ...*
 
 #### Coil Blocks
 
