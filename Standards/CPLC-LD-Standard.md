@@ -110,10 +110,22 @@ The elements are the building blocks of the language. They make up every charact
 **Move/Assignement**: a capital or lowercase "MOV" in a logical block indicates a move/assignment block. The move/assignment block takes two parameters: the first being the tag being written to and the second being the tag containing the value to be written. Both tags must be of the same type. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. *Y = A*
 
 ```[ADD]( outputY, inputA, inputB, ... )```
-**Addition**: a capital or lowercase "ADD" in a logical block indates an addition block. The addition block takes at least two parameters: the first being the tag where the final sum will be written to and the second and all thereafter being the tags that will be added together to produce a sum. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. *Y = A + B + ... *
+**Addition**: a capital or lowercase "ADD" in a logical block indates an addition block. The addition block takes at least three parameters: the first being the tag where the final sum will be written to and the second and all thereafter being the tags that will be added together to produce a sum. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. *Y = A + B + C ... *
 
 ```[SUB]( outputY, inputA, inputB, ... )```
 **Subtraction**: a capital or lowercase "SUB" in a logical block indates a subtraction block. The subtraction block takes at least three parameters: the first being the tag where the final difference will be written, the second being the tag to be subtracted from, and the third and all thereafter being the tags that will subtract. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. *Y = A - B - C ...*
+
+```[MUL]( outputY, inputA, inputB, ... )```
+**Multiplication**: a capital or lowercase "MUL" in a logical block indates a multiplication block. The multiplication block takes at least three parameters: the first being the tag where the final product will be written to and the second and thereafter being the tags that will be multiplied together to produce the product. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. *Y = A x B x C ...*
+
+```[DIV]( outputY, inputA, inputB, ... )```
+**Division**: a capital or lowercase "DIV" in a logical block indates a division block. The division block takes at least three parameters: the first being the tag where the final product will be written to, the second being the dividend, and the third and all thereafter being the tags that will be divide the divident to produce the quotient. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. *Y = A / B / C ...*
+
+```[EXP]( outputY, inputA, inputB, ... )```
+**Exponentiation**: a capital or lowercase "EXP" in a logical block indates a exponentiation block. The exponentiation block takes at least three parameters: the first being the tag where the final product will be written to, the second being the base, and the third being the power that the base will be raised to to produce the final product. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. *Y = A ^ B*
+
+```[MOD]( outputY, inputA, inputB )```
+**Modulo**: a capital or lowercase "MOD" in a logical block indates a modulo block. The modulo block takes three parameters: the first being the tag where the remainder will be written to, the second being the dividend, and the third being the modulus. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. *Y = A mod B*
 
 #### Coil Blocks
 
