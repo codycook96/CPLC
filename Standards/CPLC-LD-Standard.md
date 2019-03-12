@@ -81,6 +81,11 @@ The elements are the building blocks of the language. They make up every charact
 ```# ... #```
 **Comment Block**: A pair of pound symbolsmay be used as a comment block. All normal tect to appear within the brackets will not be compiled or executed on and left simply as a comment. This may be used to write an inline comment where code continues after the comment or as a multiline comment.
 
+```[$...]( ... , ... )```<br/>
+```($...)( ... , ... )```<br/>
+```<$...>( ... , ... )```<br/>
+**User Defined Blocks**: 
+
 ### Blocks
 
 #### Logical Blocks
@@ -124,7 +129,8 @@ The elements are the building blocks of the language. They make up every charact
 ```[MOD]( outputY, inputA, inputB )```
 **Modulo**: a capital or lowercase "MOD" in a logical block indates a modulo block. The modulo block takes three parameters: the first being the tag where the remainder will be written to, the second being the dividend, and the third being the modulus. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. <br/>*Y = A mod B*
 
-```[#Function]( ... )```
+```[$MyBlock]( ... )```
+**User-Defined Logical Block**: a dollar sign followed by any series of capital or lowercase letters indicates a user-defined logical block. The user-defined logical block takes in as many parameters as is specified in its definition. The block may read an enable-in signal, write an enable-out signal, read and write to any read-write enabled tags that it is passed as parameters, and access the internal system timer and certain other I/O facilities. The block may introduce new tags as well as keep certain variables private and internal. For more information, see [User-Defined Blocks](#User-Defined-Blocks).
 
 #### Coil Blocks
 
