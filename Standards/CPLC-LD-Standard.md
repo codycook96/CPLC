@@ -89,36 +89,45 @@ The elements are the building blocks of the language. They make up every charact
 #### Logical Blocks
 
 ```[ ]( gate )```
-**Normally Open Contact**: a single space in the logcal block indicates a normally open contact. The normally open contact takes a single parameter: a boolean switch tag that controls the switching function of the contact. When the switch tag is high and the enable-in is high, the enable-out becomes high, and when gate is low the enable-out is always low.
+**Normally Open Contact**: a single space in a logcal block indicates a normally open contact. The normally open contact takes a single parameter: a boolean switch tag that controls the switching function of the contact. When the switch tag is high and the enable-in is high, the enable-out becomes high, and when gate is low the enable-out is always low.
 
 ```[/]( gate )```
-**Normally Closed Contact**: a forward slash in the logical block indicates a normally closed contact. The normally closed contact takes a single parameter: a boolean switch tag that controls the switching function of the contact. When gate is low and the enable-in is high, the enable-out becomes high, and when gate is high the enable-out is always low.
+**Normally Closed Contact**: a forward slash in a logical block indicates a normally closed contact. The normally closed contact takes a single parameter: a boolean switch tag that controls the switching function of the contact. When gate is low and the enable-in is high, the enable-out becomes high, and when gate is high the enable-out is always low.
 
 ```[P]( gate )```
-**Positive Edge Contact**: a capital or lowercase "P" in the logical block indicates a positive edge detecting contact. The positive edge contact takes a single parameter: a boolean gate tag that controls the switching of the contact. When gate has become high in the last cycle of operation and the enable-in is high, then the enable-out becomes high. After one cycle, the enable-out becomes low and will remain low until the tag transitions to high after being low again.
+**Positive Edge Contact**: a capital or lowercase "P" in a logical block indicates a positive edge detecting contact. The positive edge contact takes a single parameter: a boolean gate tag that controls the switching of the contact. When gate has become high in the last cycle of operation and the enable-in is high, then the enable-out becomes high. After one cycle, the enable-out becomes low and will remain low until the tag transitions to high after being low again.
 
 ```[N]( gate )```
-**Negative Edge Contact**: a capital or lowercase "N" in the logical block indicates a negative edge detecting contact. The positive edge contact takes a single parameter: a boolean gate tag that controls the swithcing of the contact. When gate has become low in the last cycle of operation and the enable-in is high, then the enable-out becomes high. After one cycle, the enable out becomes low and will remain low until the tag transitions to low after being high again.
+**Negative Edge Contact**: a capital or lowercase "N" in a logical block indicates a negative edge detecting contact. The positive edge contact takes a single parameter: a boolean gate tag that controls the swithcing of the contact. When gate has become low in the last cycle of operation and the enable-in is high, then the enable-out becomes high. After one cycle, the enable out becomes low and will remain low until the tag transitions to low after being high again.
+
+```[NOT]```
+**Inverter**: a capital or lowercase "NOT" in a logical block indicates an inverter. The inverter takes no parameters. When enable-in becomes high, enable-out becomes low and when enable-in becomes low, enable-out becomes high.
+
+```[TYP]( outputY, inputA)```
+**Type Converter**: a capital or lowercase "TYP" in a logical block indicates a type converter. The type converter takes two parameters: the first being a tag of one type to be written to and the second being being a tag of a another type containing the value to be converted and written. NOT DONE
+
+```[MOV]( outputY, inputA )```
+**Move/Assignement**: a capital or lowercase "MOV" in a logical block indicates a move/assignment block. The move/assignment block takes two parameters: the first being the tag being written to and the second being the tag containing the value to be written. Both tags must be of the same type. NOT DONE
 
 #### Coil Blocks
 
 ```( )( set )```
-**Output Coil**: a space in the coil block indicates an output coil. The output coil takes a single parameter: a boolean set tag that is controlled by enable-in. When enable-in becomes high, both set tag and enable-out become high, when enable-in becomes low, both tag and enable-out become low.
+**Output Coil**: a space in a coil block indicates an output coil. The output coil takes a single parameter: a boolean set tag that is controlled by enable-in. When enable-in becomes high, both set tag and enable-out become high, when enable-in becomes low, both tag and enable-out become low.
 
 ```(S)( set )```
 **Set Coil**: a capital or lowercase "S" in the coil block indicates a set coil. The set coil takes a single parameter: a boolean set tag that is controlled by the enable-in. When the enable-in becomes high, both the set tag and enable-out become high and both stay high until the reset coil using the same tag becomes high. 
 
 ```(R)( set )```
-**Reset Coil**: a capital or lowercase "R" in the coil block indicates a reset coil. The reset coil takes a single parameter: a boolean set tag that is controlled by the enable-in. When the enable-in becomes high, both the set tag and enable-out become high and any set tag coils with the same tag name are reset to low.
+**Reset Coil**: a capital or lowercase "R" in a coil block indicates a reset coil. The reset coil takes a single parameter: a boolean set tag that is controlled by the enable-in. When the enable-in becomes high, both the set tag and enable-out become high and any set tag coils with the same tag name are reset to low.
 
-```(M)( bool set )```
-**Retentative Memory Coil**: a capital or lowercase "M" in a coil block indicates a retentative memory coil. The retentative memory coil takes a single parameter: a boolean set tag that is controlled by enable-in. When enable-in becomes high, both set tag and enable-out become high, when enable-in becomes low, both tag and enable-out become low. The coil retains its value even if the program is reset. This block may not realizable on some machines.
+```(M)( set )```
+**Retentative Memory Coil**: a capital or lowercase "M" in a coil block indicates a retentative memory coil. The retentative memory coil takes a single parameter: a boolean set tag that is controlled by enable-in. When enable-in becomes high, both set tag and enable-out become high, when enable-in becomes low, both tag and enable-out become low. The coil retains its value even if the program is reset. This block requires the ability to write to a file and may not be realizable on some machines.
 
 ```(SM)( set )```
-**Set Retentative Memory Coil**: a capital or lowercase "SM" in the coil block indicates a set retentative memory coil. The set retentative memory coil takes a single parameter: a boolean set tag that is controlled by the enable-in. When the enable-in becomes high, both the set tag and enable-out become high and both stay high until the reset coil using the same tag name becomes high. The coil retains its value even if the program is reset. This block may not realizable on some machines.
+**Set Retentative Memory Coil**: a capital or lowercase "SM" in a coil block indicates a set retentative memory coil. The set retentative memory coil takes a single parameter: a boolean set tag that is controlled by the enable-in. When the enable-in becomes high, both the set tag and enable-out become high and both stay high until the reset coil using the same tag name becomes high. The coil retains its value even if the program is reset. This block requires the ability to write to a file and may not be realizable on some machines.
 
 ```(RM)( set )```
-**Reset Retentative Memory Coil**: a capital or lowercase "RM" in the coil block indicates a reset retentative memory coil. The reset retentative memory coil takes a single parameter: a boolean set tag that is controlled by the enable-in. When the enable-in becomes high, both the set tag and enable-out become high and any set tag coils with the same tag name are reset to low.  The coil retains its value even if the program is reset. This block may not realizable on some machines.
+**Reset Retentative Memory Coil**: a capital or lowercase "RM" in a coil block indicates a reset retentative memory coil. The reset retentative memory coil takes a single parameter: a boolean set tag that is controlled by the enable-in. When the enable-in becomes high, both the set tag and enable-out become high and any set tag coils with the same tag name are reset to low.  The coil retains its value even if the program is reset. This block requires the ability to write to a file and may not be realizable on some machines.
 
 #### Function Blocks
 
@@ -126,19 +135,19 @@ The elements are the building blocks of the language. They make up every charact
 **Label**: a capital or lowercase "LBL" in a function block indicates an jump label. The label takes a single parameter: a label name. When a the enable-in on a conditional or unconditional jump with the same label becomes high, the program immediately starts executing at the rung with that label, skipping the rungs that would normally be reached before it. If there are multiple labels of the same name defined, the closest one after the called jump.
 
 ```<JMP>( label )```
-**Jump**: a capital or lowercase "JMP" in a function block with a single parameter indicates an jump. The jump takes a single parameter: a label name. When enable-in becomes high the program will stop executing the current rung and jump to the closest label of the same name.
+**Jump**: a capital or lowercase "JMP" in a function block indicates an jump. The jump takes a single parameter: a label name. When enable-in becomes high the program will stop executing the current rung and jump to the closest label of the same name.
 
 ```<FUN>( name )```
-**Function**: a capital or lowercase "FUN" in a function block with a single parameter indications a function. The function takes a single parameter: a name for the function. When any running program in the workspace reaches a functional call of the same name, the program stops and begins to run at the function. The function is designed to be used with function calls and returns.
+**Function**: a capital or lowercase "FUN" in a function block indicates a function. The function takes a single parameter: a name for the function. When any running program in the workspace reaches a functional call of the same name, the program stops and begins to run at the function. The function is designed to be used with function calls and returns.
 
 ```<CALL>( name )```
-**Function Call**: a capital or lowercase "CALL" in a function block with one parameter indicates a function call. The function call takes one parameter: a name for the function. When enable-in becomes high, as long as there is a function with the same name on some program in the workspace, the execution stops and begins to run at the function. The function is designed to be used with function calls and returns.
+**Function Call**: a capital or lowercase "CALL" in a function block indicates a function call. The function call takes one parameter: a name for the function. When enable-in becomes high, as long as there is a function with the same name on some program in the workspace, the execution stops and begins to run at the function. The function is designed to be used with function calls and returns.
 
 ```<RET>```
-**Return**: a capital or lowercase "RET" in a function block with no parameters indicates a return. The return takes no parameters. When enable-in becomes high the program will stop executing and return to the calling program at the point that the current function was called. If there was no calling program and a return is reached then program execution simple stops.
+**Return**: a capital or lowercase "RET" in a function block indicates a return. The return takes no parameters. When enable-in becomes high the program will stop executing and return to the calling program at the point that the current function was called. If there was no calling program and a return is reached then program execution simple stops.
 
 ```<END>```
-**End**: a capital or lowercase "END" in a function block with no parameters indicates an end. The end takes no parameters. When enable-in becomes high the program will stop execution completety and terminate.
+**End**: a capital or lowercase "END" in a function block indicates an end. The end takes no parameters. When enable-in becomes high the program will stop execution completety and terminate.
 
 #### Comment Blocks
 
