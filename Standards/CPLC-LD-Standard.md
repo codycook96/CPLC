@@ -46,7 +46,7 @@ The elements are the building blocks of the language. They make up every charact
 
 + **Delimiters**: special characters that are used to separate and distinguish other data. 
 
-+ **Blocks**: the set of all blocks that can be created with the allowed block delimiter shapes.
++ **Blocks**: the set of all blocks that can be created with the allowed block shapes.
 
 + **Keywords**:  the set of all meaningful combinations of characters and words that may make up data types and more.
 
