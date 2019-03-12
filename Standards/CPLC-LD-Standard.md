@@ -124,6 +124,8 @@ The elements are the building blocks of the language. They make up every charact
 ```[MOD]( outputY, inputA, inputB )```
 **Modulo**: a capital or lowercase "MOD" in a logical block indates a modulo block. The modulo block takes three parameters: the first being the tag where the remainder will be written to, the second being the dividend, and the third being the modulus. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. <br/>*Y = A mod B*
 
+```[#Function]( ... )```
+
 #### Coil Blocks
 
 ```( )( set )```
@@ -166,8 +168,8 @@ The elements are the building blocks of the language. They make up every charact
 
 #### Comment Blocks
 
-```#( text )```
-**Comment Block**: a pound symbol 
+```#Comment#```
+**Comment Block**: a pair of pound symbols make up a comment block. Any text that appears between the two pound symbols will not be executed on and enable sigals pass as if the comment were a rung. Comments can span multiple lines and cannot be nested (i.e. any pound symbol will escape the comment started by any other pound symbol).
 
 ### Keywords
 
