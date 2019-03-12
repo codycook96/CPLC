@@ -81,11 +81,6 @@ The elements are the building blocks of the language. They make up every charact
 ```# ... #```
 **Comment Block**: A pair of pound symbolsmay be used as a comment block. All normal tect to appear within the brackets will not be compiled or executed on and left simply as a comment. This may be used to write an inline comment where code continues after the comment or as a multiline comment.
 
-```[$...]( ... , ... )```<br/>
-```($...)( ... , ... )```<br/>
-```<$...>( ... , ... )```<br/>
-**User Defined Blocks**: 
-
 ### Blocks
 
 #### Logical Blocks
