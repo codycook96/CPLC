@@ -8,7 +8,7 @@
 
 ## Mission
 
-The CPLC Project is an open source project aims to create a free, simple, and modular platform for anyone to be able to learn PLC program and develop their own PLC programs on a wide variety of hardware.  
+The CPLC Project is an open source project aims to create a free, simple, and modular platform for anyone to be able to learn PLC programming and develop their own PLC programs on a wide variety of hardware.  
 
 
 ## Goals
