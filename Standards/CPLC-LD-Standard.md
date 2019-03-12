@@ -78,9 +78,6 @@ The elements are the building blocks of the language. They make up every charact
 ```< ... >( ... , ... )```
 **Function Block**: A less-than and greater-than symbol followed by a pair of parenthesis represent a function block. The less-than and greater-than sign contain any information distinguishing the function block. the pair of parenthsis are where arguments to the function block, such as function block to call or return condition, are passed. The block reads from an enable-in, EN, (rung input) and writes to an enable-out, ENO (rung output).
 
-```> ... >( ... , ...)```
-**Jump Block**: A pair of two greater-than symbols followed by a pair of parenthesis represent a jump block. The two greater-than symbols contain any information distinguishing the jump block. The pair of parenthesis are where arguments to the jump block, such as location and condition, are passed. The block reads from an enable-in, EN, (rung input) and writes to an enable-out, ENO (rung output).
-
 ```#{ ... }```
 **Comment Block**: A pound symbol with brackets may be used as a comment block. All normal tect to appear within the brackets will not be compiled or executed on and left simply as a comment. This may be used to write an inline comment where code continues after the comment or as a multiline comment.
 
