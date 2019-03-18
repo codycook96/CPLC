@@ -2,7 +2,7 @@
 
 ## Thank You!
 
-Thank you for considering contributing to CPLC. With your help, this project can help educate and make PLC technology more accessible.
+Thank you for considering to contribute to CPLC. With your help, this project can help educate and make PLC technology more accessible.
 
 [1] [Source](https://github.com/codycook96/CPLC/master/CONTRIBUTING.md) [2] [Documentation](https://github.com/codycook96/CPLC/master/) [3] [Website (TBD)](https://github.com/codycook96/CPLC/master/CONTRIBUTING.md) 
 

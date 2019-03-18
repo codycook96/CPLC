@@ -87,46 +87,59 @@ The elements are the building blocks of the language. They make up every charact
 
 #### Logical Blocks
 
-```[ ]( gate )```
+```[ ]( gate )``` <br/>
 **Normally Open Contact**: a single space in a logcal block indicates a normally open contact. The normally open contact takes a single parameter: a boolean switch tag that controls the switching function of the contact. When the switch tag is high and the enable-in is high, the enable-out becomes high, and when gate is low the enable-out is always low.
 
-```[/]( gate )```
+```[/]( gate )``` <br/>
 **Normally Closed Contact**: a forward slash in a logical block indicates a normally closed contact. The normally closed contact takes a single parameter: a boolean switch tag that controls the switching function of the contact. When gate is low and the enable-in is high, the enable-out becomes high, and when gate is high the enable-out is always low.
 
-```[P]( gate )```
+```[P]( gate )``` <br/>
 **Positive Edge Contact**: a capital or lowercase "P" in a logical block indicates a positive edge detecting contact. The positive edge contact takes a single parameter: a boolean gate tag that controls the switching of the contact. When gate has become high in the last cycle of operation and the enable-in is high, then the enable-out becomes high. After one cycle, the enable-out becomes low and will remain low until the tag transitions to high after being low again.
 
-```[N]( gate )```
+```[N]( gate )``` <br/>
 **Negative Edge Contact**: a capital or lowercase "N" in a logical block indicates a negative edge detecting contact. The positive edge contact takes a single parameter: a boolean gate tag that controls the swithcing of the contact. When gate has become low in the last cycle of operation and the enable-in is high, then the enable-out becomes high. After one cycle, the enable out becomes low and will remain low until the tag transitions to low after being high again.
 
-```[NOT]```
+```[NOT]``` <br/>
 **Inverter**: a capital or lowercase "NOT" in a logical block indicates an inverter. The inverter takes no parameters. When enable-in becomes high, enable-out becomes low and when enable-in becomes low, enable-out becomes high.
 
-```[TYP]( outputY, inputA)```
-**Type Converter**: a capital or lowercase "TYP" in a logical block indicates a type converter. The type converter takes two parameters: the first being a tag of one type to be written to and the second being being a tag of a another type containing the value to be converted and written. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true.
+```[TYP]( outputY, inputA)``` <br/>
+**Type Converter**: a capital or lowercase "TYP" in a logical block indicates a type converter. The type converter takes two parameters: the first being a tag of one type to be written to and the second being being a tag of a another type containing the value to be converted and written. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
 
-```[MOV]( outputY, inputA )```
-**Move/Assignement**: a capital or lowercase "MOV" in a logical block indicates a move/assignment block. The move/assignment block takes two parameters: the first being the tag being written to and the second being the tag containing the value to be written. Both tags must be of the same type. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. <br/>*Y = A*
+```[MOV]( outputY, inputA )``` <br/>
+```[SET]( outputY, inputA )``` <br/>
+**Move/Assignement**: a capital or lowercase "MOV" in a logical block indicates a move/assignment block. The move/assignment block takes two parameters: the first being the tag being written to and the second being the tag or literal containing the value to be written. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high. <br/>*Y = A*
 
-```[ADD]( outputY, inputA, inputB, ... )```
-**Addition**: a capital or lowercase "ADD" in a logical block indates an addition block. The addition block takes at least three parameters: the first being the tag where the final sum will be written to and the second and all thereafter being the tags that will be added together to produce a sum. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. <br/>*Y = A + B + C ...*
+```[ADD]( outputY, inputA, inputB, ... )``` <br/>
+**Addition**: a capital or lowercase "ADD" in a logical block indates an addition block. The addition block takes at least three parameters: the first being the tag where the final sum will be written to and the second and all thereafter being the tags or literals that will be added together to produce a sum. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high. <br/>*Y = A + B + C ...*
 
-```[SUB]( outputY, inputA, inputB, ... )```
-**Subtraction**: a capital or lowercase "SUB" in a logical block indates a subtraction block. The subtraction block takes at least three parameters: the first being the tag where the final difference will be written, the second being the tag to be subtracted from, and the third and all thereafter being the tags that will subtract. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. <br/>*Y = A - B - C ...*
+```[SUB]( outputY, inputA, inputB, ... )``` <br/>
+**Subtraction**: a capital or lowercase "SUB" in a logical block indates a subtraction block. The subtraction block takes at least three parameters: the first being the tag where the final difference will be written, the second being the tag or literal to be subtracted from, and the third and all thereafter being the tags or literals that will subtract. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high. <br/>*Y = A - B - C ...*
 
-```[MUL]( outputY, inputA, inputB, ... )```
-**Multiplication**: a capital or lowercase "MUL" in a logical block indates a multiplication block. The multiplication block takes at least three parameters: the first being the tag where the final product will be written to and the second and thereafter being the tags that will be multiplied together to produce the product. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. <br/>*Y = A x B x C ...*
+```[MUL]( outputY, inputA, inputB, ... )``` <br/>
+**Multiplication**: a capital or lowercase "MUL" in a logical block indates a multiplication block. The multiplication block takes at least three parameters: the first being the tag where the final product will be written to and the second and thereafter being the tags or literals that will be multiplied together to produce the product. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high. <br/>*Y = A x B x C ...*
 
-```[DIV]( outputY, inputA, inputB, ... )```
-**Division**: a capital or lowercase "DIV" in a logical block indates a division block. The division block takes at least three parameters: the first being the tag where the final product will be written to, the second being the dividend, and the third and all thereafter being the tags that will be divide the divident to produce the quotient. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. <br/>*Y = A / B / C ...*
+```[DIV]( outputY, inputA, inputB, ... )``` <br/>
+**Division**: a capital or lowercase "DIV" in a logical block indates a division block. The division block takes at least three parameters: the first being the tag where the final product will be written to, the second being the dividend, and the third and all thereafter being the tags or literals that will be divide the dividend to produce the quotient. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high. <br/>*Y = A / B / C ...*
 
-```[EXP]( outputY, inputA, inputB, ... )```
-**Exponentiation**: a capital or lowercase "EXP" in a logical block indates a exponentiation block. The exponentiation block takes at least three parameters: the first being the tag where the final product will be written to, the second being the base, and the third being the power that the base will be raised to produce the final product. For more than three parameters, every latter parameter is taken to be a successive power to the previous parameter. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. <br/>*Y = A ^ B ^ C ...*
+```[EXP]( outputY, inputA, inputB, ... )``` <br/>
+**Exponentiation**: a capital or lowercase "EXP" in a logical block indates a exponentiation block. The exponentiation block takes at least three parameters: the first being the tag where the final product will be written to, the second being a tag or literal for the base, and the third being a tag or literal for the power that the base will be raised to produce the final product. For more than three parameters, every latter parameter is taken to be a successive power to the previous parameter. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high. <br/>*Y = A ^ B ^ C ...*
 
-```[MOD]( outputY, inputA, inputB )```
-**Modulo**: a capital or lowercase "MOD" in a logical block indates a modulo block. The modulo block takes three parameters: the first being the tag where the remainder will be written to, the second being the dividend, and the third being the modulus. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is true. <br/>*Y = A mod B*
+```[MOD]( outputY, inputA, inputB )``` <br/>
+**Modulo**: a capital or lowercase "MOD" in a logical block indates a modulo block. The modulo block takes three parameters: the first being the tag where the remainder will be written to, the second being the tag or literal for the dividend, and the third being the tag or literal for the modulus. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high. <br/>*Y = A mod B*
 
-```[$MyBlock]( ... )```
+```[BITNOT]( outputY, intputA )``` <br/>
+**Bitwise Inverter**: a capital or lowercase "BITNOT" in a logical block indicates a bitwise inverter. The bitwise inverter block takes two parameters: the first being a tag where the inverted value will be stored and the second being a tag or literal that will have each bit inverted. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
+
+```[BITAND]( outputY, intputA, inputB, ... )``` <br/>
+**Bitwise And**: a capital or lowercase "BITAND" in a logical block indicates a bitwise and. The bitwise and block takes three or more parameters: the first being a tag where the final value will be stored and all of the following being tags or literals that will have each respective bit AND'ed for the output. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
+
+```[BITOR]( outputY, intputA, inputB, ... )``` <br/>
+**Bitwise Or**: a capital or lowercase "BITOR" in a logical block indicates a bitwise or. The bitwise or block takes three or more parameters: the first being a tag where the final value will be stored and all of the following being tags or literals that will have each respective bit OR'ed for the output. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
+
+```[BITXOR]( outputY, intputA, inputB )``` <br/>
+**Bitwise exclusive or**: a capital or lowercase "BITXOR" in a logical block indicates a bitwise exclusive or. The bitwise exclusive or block takes three or more parameters: the first being a tag where the final value will be stored and all of the following being tags or literals that will have each respective bit XOR'ed for the output. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
+
+```[$MyBlock]( ... )``` <br/>
 **User-Defined Logical Block**: a dollar sign followed by any series of capital or lowercase letters or numbers (first character must be a letter) in a logical block indicates a user-defined logical block. The user-defined logical block takes in as many parameters as is specified in its definition. The block may read an enable-in signal, write an enable-out signal, read and write to any read-write enabled tags that it is passed as parameters, and access the internal system timer and certain other I/O facilities. The block may introduce new tags as well as keep certain variables private and internal. For more information, see [User-Defined Blocks](#User-Defined-Blocks).
 
 #### Coil Blocks
