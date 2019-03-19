@@ -24,7 +24,9 @@
     
     + [**User-Defined Blocks**](#User-Defined-Blocks)
   
-  + [**Keywords**](#Keywords)
+  + [**Types**](#Types)
+  
+  + [**Tags**](#Tags)
   
   + [**Literals**](#Literals)
 
@@ -209,7 +211,9 @@ The elements are the building blocks of the language. They make up every charact
 
 #### User-Defined Blocks
 
-### Keywords
+### Types
+
+### Tags
 
 ### Literals
 
