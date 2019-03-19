@@ -107,7 +107,7 @@ The elements are the building blocks of the language. They make up every charact
 
 ```[MOV]( outputY, inputA )``` <br/>
 ```[SET]( outputY, inputA )``` <br/>
-**Move/Assignement**: a capital or lowercase "MOV" in a logical block indicates a move/assignment block. The move/assignment block takes two parameters: the first being the tag being written to and the second being the tag or literal containing the value to be written. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high. <br/>*Y = A*
+**Move/Set**: a capital or lowercase "MOV" or "SET" in a logical block indicates a move/set block. The move/set block takes two parameters: the first being the tag being written to and the second being the tag or literal containing the value to be written. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high. <br/>*Y = A*
 
 ```[ADD]( outputY, inputA, inputB, ... )``` <br/>
 **Addition**: a capital or lowercase "ADD" in a logical block indates an addition block. The addition block takes at least three parameters: the first being the tag where the final sum will be written to and the second and all thereafter being the tags or literals that will be added together to produce a sum. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high. <br/>*Y = A + B + C ...*
@@ -127,17 +127,29 @@ The elements are the building blocks of the language. They make up every charact
 ```[MOD]( outputY, inputA, inputB )``` <br/>
 **Modulo**: a capital or lowercase "MOD" in a logical block indates a modulo block. The modulo block takes three parameters: the first being the tag where the remainder will be written to, the second being the tag or literal for the dividend, and the third being the tag or literal for the modulus. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high. <br/>*Y = A mod B*
 
-```[BITNOT]( outputY, intputA )``` <br/>
-**Bitwise Inverter**: a capital or lowercase "BITNOT" in a logical block indicates a bitwise inverter. The bitwise inverter block takes two parameters: the first being a tag where the inverted value will be stored and the second being a tag or literal that will have each bit inverted. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
+```[NOT]( outputY, intputA )``` <br/>
+**Bitwise Invert**: a capital or lowercase "NOT" in a logical block indicates a bitwise invert. The bitwise invert block takes two parameters: the first being a tag where the inverted value will be stored and the second being a tag or literal that will have each bit inverted. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
 
-```[BITAND]( outputY, intputA, inputB, ... )``` <br/>
-**Bitwise And**: a capital or lowercase "BITAND" in a logical block indicates a bitwise and. The bitwise and block takes three or more parameters: the first being a tag where the final value will be stored and all of the following being tags or literals that will have each respective bit AND'ed for the output. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
+```[AND]( outputY, intputA, inputB, ... )``` <br/>
+**Bitwise And**: a capital or lowercase "AND" in a logical block indicates a bitwise and. The bitwise and block takes three or more parameters: the first being a tag where the final value will be stored and all of the following being tags or literals that will have each respective bit AND'ed for the output. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
 
-```[BITOR]( outputY, intputA, inputB, ... )``` <br/>
-**Bitwise Or**: a capital or lowercase "BITOR" in a logical block indicates a bitwise or. The bitwise or block takes three or more parameters: the first being a tag where the final value will be stored and all of the following being tags or literals that will have each respective bit OR'ed for the output. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
+```[OR]( outputY, intputA, inputB, ... )``` <br/>
+**Bitwise Or**: a capital or lowercase "OR" in a logical block indicates a bitwise or. The bitwise or block takes three or more parameters: the first being a tag where the final value will be stored and all of the following being tags or literals that will have each respective bit OR'ed for the output. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
 
-```[BITXOR]( outputY, intputA, inputB )``` <br/>
-**Bitwise exclusive or**: a capital or lowercase "BITXOR" in a logical block indicates a bitwise exclusive or. The bitwise exclusive or block takes three or more parameters: the first being a tag where the final value will be stored and all of the following being tags or literals that will have each respective bit XOR'ed for the output. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
+```[XOR]( outputY, intputA, inputB )``` <br/>
+**Bitwise Exclusive Or**: a capital or lowercase "XOR" in a logical block indicates a bitwise exclusive or. The bitwise exclusive or block takes three or more parameters: the first being a tag where the final value will be stored and all of the following being tags or literals that will have each respective bit XOR'ed for the output. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.\
+
+```[SHL]( outputY, intputA, inputB )``` <br/>
+**Bitwise Shift Left**: a capital or lowercase "SHL" in a logical block indicates a bitwise shift left. The bitwise shift left block takes three or more parameters: the first being a tag where the final value will be stored, the second being a tag or literal with the value to be shifted and the third being a tag or value for the number of left shifts of the second value to take place. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
+
+```[SHR]( outputY, intputA, inputB )``` <br/>
+**Bitwise Shift Right**: a capital or lowercase "SHR" in a logical block indicates a bitwise shift right. The bitwise shift right block takes three or more parameters: the first being a tag where the final value will be stored, the second being a tag or literal with the value to be shifted and the third being a tag or value for the number of right shifts of the second value to take place. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
+
+```[ROL]( outputY, intputA, inputB )``` <br/>
+**Bitwise Rotate Left**: a capital or lowercase "ROL" in a logical block indicates a bitwise rotate left. The bitwise rotate left block takes three or more parameters: the first being a tag where the final value will be stored, the second being a tag or literal with the value to be rotated and the third being a tag or value for the number of left rotates of the second value to take place. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
+
+```[ROR]( outputY, intputA, inputB )``` <br/>
+**Bitwise Rotate Right**: a capital or lowercase "ROR" in a logical block indicates a bitwise rotate right. The bitwise rotate right block takes three or more parameters: the first being a tag where the final value will be stored, the second being a tag or literal with the value to be rotated and the third being a tag or value for the number of right rotates of the second value to take place. Enable-in is passed directly to enable-out and the value is only written to the output if enable-in is high.
 
 ```[$MyBlock]( ... )``` <br/>
 **User-Defined Logical Block**: a dollar sign followed by any series of capital or lowercase letters or numbers (first character must be a letter) in a logical block indicates a user-defined logical block. The user-defined logical block takes in as many parameters as is specified in its definition. The block may read an enable-in signal, write an enable-out signal, read and write to any read-write enabled tags that it is passed as parameters, and access the internal system timer and certain other I/O facilities. The block may introduce new tags as well as keep certain variables private and internal. For more information, see [User-Defined Blocks](#User-Defined-Blocks).
