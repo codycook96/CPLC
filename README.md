@@ -54,7 +54,7 @@ An interpeter is needed to actually be able to run any of the CPLC files. The fi
 
 #### Progress ([Not Started] -> [In Progress] -> [Completed])
 
-+ **[Not Started] Create a tokenizer to interpret and push all tokens onto a program stack**
++ **[Not Started] Create a lexer (tokenizer) to interpret and push all tokens onto a program stack**
 
 + **[Not Started] Create a parser to parse the tokens into something similar to an abstract syntax tree**
 
