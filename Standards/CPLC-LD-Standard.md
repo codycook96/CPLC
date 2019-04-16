@@ -24,7 +24,9 @@
     
     + [**User-Defined Blocks**](#User-Defined-Blocks)
   
-  + [**Keywords**](#Keywords)
+  + [**Types**](#Types)
+  
+  + [**Tags**](#Tags)
   
   + [**Literals**](#Literals)
 
@@ -48,9 +50,11 @@ The elements are the building blocks of the language. They make up every charact
 
 + **Delimiters**: special characters that are used to separate and distinguish other data. 
 
-+ **Blocks**: the set of all blocks that can be created with the allowed block shapes.
++ **Blocks**: the set of all blocks that can be created with the allowed block shapes and allowed block identifiers.
 
-+ **Keywords**:  the set of all meaningful combinations of characters and words that may make up data types and more.
++ **Types**: the set of all words that will be interpreted as a data type.
+
++ **Tags**: characters or words to be interpreted as variable names of a certain type.
 
 + **Literals**: characters or words to be interpreted as literal data values such as an integer number.
 
@@ -207,7 +211,9 @@ The elements are the building blocks of the language. They make up every charact
 
 #### User-Defined Blocks
 
-### Keywords
+### Types
+
+### Tags
 
 ### Literals
 
