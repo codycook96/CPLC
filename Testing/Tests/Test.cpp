@@ -2,7 +2,7 @@
 
 #include "TestBench.h"
 
-#include "Type/Compare/TestTypeCompare.h"
+
 
 int main(int argc, char* argv[]){
     //Get commandline arguments
@@ -25,7 +25,7 @@ int main(int argc, char* argv[]){
     //--------TYPE TESTING--------//
     //COMPARE
     if(runTestTypeCompare){ 
-        TestTypeCompare(*tb); 
+        //TestTypeCompare(*tb); 
     }
     
 

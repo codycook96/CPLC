@@ -13,14 +13,12 @@ Test::Test(Test t){
 Test::Test(){
 }
 
-Test::Test(std::string _name, std::function<bool()> _test){
-    name = _name;
-    test = _test;
-    pass = false;
-    err = false;
+Test::Test(const Test& t){
+
 }
 
 void Test::run(){
+    /*
     try{
         pass = test();
     }
@@ -35,26 +33,15 @@ void Test::run(){
     if(error){
         pass = false;
     }
+    */
 }
 
-void Test::setTest(std::function<bool()> t){
-    test = t;
+void Test::addCase(std::function<bool()> c){
+    //test = t;
 }
 
 std::string Test::getName(){
     return name;
-}
-
-bool Test::getPass(){
-    return pass;
-}
-
-bool Test::getErr(){
-    return err;
-}
-
-std::function<bool()> Test::getTest(){
-    return test;
 }
 
 std::string Test::getError(){
@@ -96,13 +83,14 @@ void TestBench::test(){
 
         t->run();
 
+        /*
         if(t->getErr()){
             file << t->getError();
         }
         else{
             file << t->getReport();
         }
-        
+        */
         file.close();
         delete t;
         tests.erase(tests.begin());

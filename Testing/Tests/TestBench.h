@@ -12,30 +12,44 @@
 
 class Test{
     private:
+        //Test Name
         std::string name;
-        bool pass;
-        bool err;
-        std::function<bool()> test;
+        
+        //Test Output Path
+        std::string outputFile;
+        
+        //Case Result Vectors
+        std::vector<bool> pass;
+        std::vector<bool> err;
+
+        //Case Vector
+        std::vector<std::function<bool()>> cases;
+
+        //Private Streams
         std::stringstream error;
+
     public:
         //Constructors
         Test();
-        //Test(Test t);
-        Test(std::string _name, std::function<bool()> _test);
+        Test(const Test& t);
+        
+        //Add Case
+        void addCase(std::function<bool()> t);
 
-        //Public Members
+        //Run Test
+        void run();
+        
+        //Public Streams
         std::stringstream report;
         std::stringstream description;
-        
-        //Public Functions
-        void run();
 
-        //Accessors
-        void setTest(std::function<bool()> t);
+
+
+        //void setTest(std::function<bool()> t);
         std::string getName();
-        bool getPass();
-        bool getErr();
-        std::function<bool()> getTest();
+        //bool getPass();
+        //bool getErr();
+        //std::function<bool()> getTest();
         std::string getError();
         std::string getReport();
         std::string getDescription();
