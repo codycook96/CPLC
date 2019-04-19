@@ -1,3 +1,0 @@
-Test: Equality Checking
-Description: Checking that types are equal and only equal to their same type
-Test

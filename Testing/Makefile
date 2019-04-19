@@ -8,7 +8,7 @@ CXXFLAGS = -g -Wall -std=c++11
 TEST_DIR = Tests
 
 #Build Directory
-BUILD_DIR = $(TEST_DIR)/Build
+BUILD_DIR = Build
 
 #Program Source Directories
 SOURCE_DIR = ../Source
@@ -18,14 +18,6 @@ DATABASE_DIR = $(SOURCE_DIR)/Database
 ENGINE_DIR = $(SOURCE_DIR)/Engine
 LANGUAGE_DIR = $(SOURCE_DIR)/Language
 UTILITY_DIR = $(SOURCE_DIR)/Utility
-
-#Testing Directories
-TEST_APPLICATION_DIR = $(TEST_DIR)/Application
-TEST_ASSEMBLER_DIR = $(TEST_DIR)/Assembler
-TEST_DATABASE_DIR = $(TEST_DIR)/Database
-TEST_ENGINE_DIR = $(TEST_DIR)/Engine
-TEST_LANGUAGE_DIR = $(TEST_DIR)/Language
-TEST_UTILITY_DIR = $(TEST_DIR)/Utility
 
 #============INCLUDE============#
 #Test Include
@@ -41,12 +33,18 @@ UTILITY_INC = -I$(UTILITY_DIR)
 SOURCE_INC = $(APPLICATION_INC) $(ASSEMBLER_INC) $(DATABASE_INC) $(ENGINE_INC) $(LANGUAGE_INC) $(UTILITY_INC)
 
 #All Include
-ALL_INC = $(TEST_INC) $(SOURCE_INC)
+ALL_INC = $(TEST_INC) $(SOURCE_INC) -I.
 
 
 #============OBJECTS============#
 #Test Objects
-TEST_OBJ = $(BUILD_DIR)/Test.o $(BUILD_DIR)/TestBench.o
+#TEST_OBJ = $(BUILD_DIR)/Test.o $(BUILD_DIR)/TestBench.o
+TEST_SRC = $(wildcard $(TEST_DIR)/*.cpp)
+#TEST_OBJ = $(wildcard *.o)
+#TEST_SRC = $(wildcard $(TEST_DIR)/*.cpp)
+TEST_OBJ = $(patsubst $(TEST_DIR)/%.cpp,$(TEST_DIR)/%.o,$(TEST_SRC))
+#SRC_FILES := $(wildcard $(SRC_DIR)/*.cpp)
+#OBJ_FILES := $(patsubst $(TEST_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(TEST_SRC))
 
 #Program Objects
 APPLICATION_OBJ =
@@ -58,7 +56,7 @@ UTILITY_OBJ = $(BUILD_DIR)/Exception.o
 
 #Object Colletions
 SOURCE_OBJ = $(APPLICATION_OBJ) $(ASSEMBLER_OBJ) $(DATABASE_OBJ) $(ENGINE_OBJ) $(LANGUAGE_OBJ) $(UTILITY_OBJ)
-ALL_OBJ =  $(TEST_OBJ) $(SOURCE_OBJ)
+ALL_OBJ =  $(TEST_OBJ) $(SOURCE_OBJ) $(BUILD_DIR)/TestBench.o $(BUILD_DIR)/Test.o #$(TEST_DIR)/TestList.o
 
 #Build Target
 TARGET = Test
@@ -70,12 +68,22 @@ all: $(TARGET)
 $(TARGET): $(ALL_OBJ)
 	$(CC) $(CFLAGS) $(ALL_OBJ) $(ALL_INC) -o $@
 
-#Test Rules
-$(BUILD_DIR)/Test.o: $(TEST_DIR)/Test.cpp
-	$(CC) $(CFLAGS) $(TEST_INC) -c $(TEST_DIR)/Test.cpp -o $(BUILD_DIR)/Test.o
+#Tester Rules
+$(BUILD_DIR)/Test.o: Test.cpp
+	$(CC) $(CFLAGS) $(ALL_INC) -c Test.cpp -o $(BUILD_DIR)/Test.o
 
-$(BUILD_DIR)/TestBench.o: $(TEST_DIR)/TestBench.cpp $(TEST_DIR)/TestBench.h
-	$(CC) $(CFLAGS) $(TEST_INC) -c $(TEST_DIR)/TestBench.cpp -o $(BUILD_DIR)/TestBench.o
+$(BUILD_DIR)/TestBench.o: TestBench.cpp TestBench.h
+	$(CC) $(CFLAGS) $(ALL_INC) -c TestBench.cpp -o $(BUILD_DIR)/TestBench.o
+
+#$(TEST_DIR)/TestList.o: $(TEST_DIR)/TestList.cpp $(TEST_DIR)/TestList.h $(SOURCE_OBJ) $(BUILD_DIR)/TestBench.o
+#	$(CC) $(CFLAGS) $(ALL_INC) -c $(TEST_DIR)/TestList.cpp -o $(TEST_DIR)/TestList.o
+
+$(TEST_DIR)/%.o: $(TEST_DIR)/%.cpp $(SOURCE_OBJ) $(BUILD_DIR)/TestBench.o
+	$(CC) $(CFLAGS) $(ALL_INC) -c $< -o $@ 
+
+#Test Rules
+#$(BUILD_DIR)/.o: $(TEST_DIR)/Test.cpp
+#	$(CC) $(CFLAGS) $(TEST_INC) -c $(TEST_DIR)/Test.cpp -o $(BUILD_DIR)/Test.o
 
 #Application Rules
 
@@ -140,5 +148,6 @@ $(BUILD_DIR)/Exception.o: $(UTILITY_DIR)/Exception.cpp $(UTILITY_DIR)/Exception.
 
 clean:
 	#-rm -f *.o
-	-rm -f $(BUILD_DIR)*.o
+	-rm -f $(BUILD_DIR)/*.o
+	-rm -f $(TEST_DIR)/*.o
 	-rm -f $(TARGET)
