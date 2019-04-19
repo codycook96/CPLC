@@ -1,0 +1,10 @@
+[TEST] TypeComparison
+[PASS %] 60%
+[ERR %] 20%
+[INFO]
+Test: Type Comparison Checking
+Description: Checking that generic types accept their proper child types
+[ERR]
+Generic Exception
+[REPORT]
+This one is true
