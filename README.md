@@ -1,6 +1,6 @@
 # CPLC 
 
-*An Open PLC Development Platform*
+*An Open PLC Programming Development Platform*
 
 [1] [Changelog](/CHANGELOG.md) [2] [Testing Reports](/Testing/TESTING.md) [3] [Contributing Guidelines](/CONTRIBUTING.md) [4] [License](/LICENSE) 
 
