@@ -11,6 +11,17 @@
 #include <exception>
 #include <ctime>
 
+#include "Exception.h"
+
+class TestException: public Exception{
+    private:
+        int caseNum;
+
+    public:
+        explicit TestException(std::string _msg, std::string _throwFile = "", int _throwLine = 0, int _caseNum = 0);
+        const std::string read() const;
+};
+
 class Test{
     private:
         //Test Name
@@ -69,6 +80,7 @@ class TestBench{
         //void addTest(Test t);
         //void addTest(std::string n, std::function<bool()> t);
         void addTest(Test* test, std::string testName);
+        std::vector<std::string> testList();
         void test(std::string testName);
         void test(std::vector<std::string> testNames);
 

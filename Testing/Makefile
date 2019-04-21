@@ -38,13 +38,8 @@ ALL_INC = $(TEST_INC) $(SOURCE_INC) -I.
 
 #============OBJECTS============#
 #Test Objects
-#TEST_OBJ = $(BUILD_DIR)/Test.o $(BUILD_DIR)/TestBench.o
 TEST_SRC = $(wildcard $(TEST_DIR)/*.cpp)
-#TEST_OBJ = $(wildcard *.o)
-#TEST_SRC = $(wildcard $(TEST_DIR)/*.cpp)
-TEST_OBJ = $(patsubst $(TEST_DIR)/%.cpp,$(TEST_DIR)/%.o,$(TEST_SRC))
-#SRC_FILES := $(wildcard $(SRC_DIR)/*.cpp)
-#OBJ_FILES := $(patsubst $(TEST_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(TEST_SRC))
+TEST_OBJ = $(patsubst $(TEST_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(TEST_SRC))
 
 #Program Objects
 APPLICATION_OBJ =
@@ -75,15 +70,9 @@ $(BUILD_DIR)/Test.o: Test.cpp
 $(BUILD_DIR)/TestBench.o: TestBench.cpp TestBench.h
 	$(CC) $(CFLAGS) $(ALL_INC) -c TestBench.cpp -o $(BUILD_DIR)/TestBench.o
 
-#$(TEST_DIR)/TestList.o: $(TEST_DIR)/TestList.cpp $(TEST_DIR)/TestList.h $(SOURCE_OBJ) $(BUILD_DIR)/TestBench.o
-#	$(CC) $(CFLAGS) $(ALL_INC) -c $(TEST_DIR)/TestList.cpp -o $(TEST_DIR)/TestList.o
-
-$(TEST_DIR)/%.o: $(TEST_DIR)/%.cpp $(SOURCE_OBJ) $(BUILD_DIR)/TestBench.o
+$(BUILD_DIR)/%.o: $(TEST_DIR)/%.cpp $(SOURCE_OBJ) $(BUILD_DIR)/TestBench.o
 	$(CC) $(CFLAGS) $(ALL_INC) -c $< -o $@ 
 
-#Test Rules
-#$(BUILD_DIR)/.o: $(TEST_DIR)/Test.cpp
-#	$(CC) $(CFLAGS) $(TEST_INC) -c $(TEST_DIR)/Test.cpp -o $(BUILD_DIR)/Test.o
 
 #Application Rules
 
@@ -123,31 +112,8 @@ $(BUILD_DIR)/Logger.o: $(ENGINE_DIR)/Logger.cpp $(ENGINE_DIR)/Logger.h
 $(BUILD_DIR)/Exception.o: $(UTILITY_DIR)/Exception.cpp $(UTILITY_DIR)/Exception.h
 	$(CC) $(CFLAGS) $(UTILITY_INC) -c $(UTILITY_DIR)/Exception.cpp -o $(BUILD_DIR)/Exception.o
 
-####### Implicit rules
-#all: $(SOURCES) $(TARGET)
-
-#.SUFFIXES: .o .c .cpp .cc .cxx .C
-
-#$(TARGET): $(OBJECTS)
-#	$(CXX) $(OBJECTS) $(CXXFLAGS) $(INCLUDE) -o $@
-
-#.cpp.o:
-#	$(CXX) -c $(CXXFLAGS) $(INCLUDE) -o "$@" "$<"
-
-#.cc.o:
-#	$(CXX) -c $(CXXFLAGS) $(INCLUDE) -o "$@" "$<"
-
-#.cxx.o:
-#	$(CXX) -c $(CXXFLAGS) $(INCLUDE) -o "$@" "$<"
-
-#.C.o:
-#	$(CXX) -c $(CXXFLAGS) $(INCLUDE) -o "$@" "$<"
-
-#.c.o:
-#	$(CC) -c $(CFLAGS) $(INCLUDE) -o "$@" "$<"
-
 clean:
 	#-rm -f *.o
 	-rm -f $(BUILD_DIR)/*.o
 	-rm -f $(TEST_DIR)/*.o
-	-rm -f $(TARGET)
+	-rm -f $(TARGET) 

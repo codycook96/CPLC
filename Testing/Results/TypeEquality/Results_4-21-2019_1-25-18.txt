@@ -1,0 +1,9 @@
+[TEST]	TypeEquality
+[PASS]	100%
+[ERR]	0%
+[INFO]
+Test: Equality Checking
+Description: Checking that types are equal and only equal to their same type
+
+[REPORT]
+

@@ -1,6 +1,6 @@
 #include "TestList.h"
 
-//using namespace Testing;
+
 
 void Testing::TypeEquality(TestBench& tb){
     Test* t = new Test("TypeEquality"); 

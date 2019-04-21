@@ -1,49 +1,49 @@
 #include "TestList.h"
 
-//using namespace Testing;
+
 
 void Testing::TypeComparison(TestBench& tb){
-    Test* t = new Test("TypeComparison"); 
+    Test& t = *(new Test("TypeComparison")); 
 
     //Test information
-    t->info << "Test: Type Comparison Checking" << std::endl;
-    t->info << "Description: Checking that generic types accept their proper child types" << std::endl;
-    Test& t1 = *t;
+    t.info << "Checking that generic types accept their proper child types" << std::endl;
+    
     //Add Cases
-    t->addCase(
+    //Case 1
+    t.addCase(
         [&] () -> bool { 
-            t1.report << "This one is true" << std::endl;
+            t.report << "This one is true" << std::endl;
             return true;
         }
     );
-
-    t->addCase(
+    //Case 2
+    t.addCase(
         [&] () -> bool { 
             //t->report << "This one is false" << std::endl;
             return false;
         }
     );
-
-    t->addCase(
+    //Case 3
+    t.addCase(
         [&] () -> bool { 
             //t->report << "This one is true" << std::endl;
             return true;
         }
     );
-    
-    t->addCase(
+    //Case 4
+    t.addCase(
         [&] () -> bool { 
             //t->report << "This one is error" << std::endl;
-            throw "Howdy";
+            throw TestException("Error could not do the thing.", "TypeComparison.cpp", 37, 4);
         }
     );
-
-    t->addCase(
+    //Case 5
+    t.addCase(
         [&] () -> bool { 
             //t->report << "This one is true" << std::endl;
             return true;
         }
     );
     
-    tb.addTest(t, t->getName());
+    tb.addTest(&t, t.getName());
 }
