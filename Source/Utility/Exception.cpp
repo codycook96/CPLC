@@ -1,10 +1,20 @@
 #include "Exception.h"
 
-//Exception::Exception(std::string _msg, std::string _throwFile = "", int _throwLine = 0): msg(_msg), throwFile(""), throwFile(0){}
+Exception::Exception(): msg("Default Exception"){}
 
-//Exception::Exception(std::string _msg, std::string _throwFile, int _throwLine): msg(_msg), throwFile(_throwFile), throwFile(_throwFile){}
-Exception::Exception(std::string _msg): msg(_msg){}
+Exception::Exception(std::string _msg, std::string _throwFile, int _throwLine): msg(_msg), throwFile(_throwFile), throwLine(_throwLine){}
 
 const char* Exception::what() const throw (){
-    return msg.c_str();
+    return read().c_str();
+}
+
+const std::string Exception::read() const{
+    std::stringstream ss;
+    if(throwLine < 0 or throwFile == ""){
+        ss << msg << std::endl;
+    }
+    else{
+        ss << msg << "/t" << "[file: " << throwFile << ", on line: " << throwLine << "]" << std::endl;
+    }
+    return ss.str();
 }

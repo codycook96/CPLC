@@ -11,7 +11,7 @@
 
 #include "Datum.h"
 
-enum TYPE_ID{
+enum TYPE_ID : unsigned long long int{
     TYPE_ANY = 1,
         //x3
         TYPE_ANY_DERIVED = 3,
@@ -72,7 +72,24 @@ enum TYPE_ID{
                 //x17
                 TYPE_DATE_AND_TIME = 374,
                 //x19
-                TYPE_TIME_OF_DAY = 418,
+                TYPE_TIME_OF_DAY = 418
+};
+
+class TYPE{
+    public:
+        TYPE();
+        TYPE(TYPE_ID _id);
+        TYPE(std::string label);
+        TYPE(const TYPE& t);
+
+        TYPE_ID id;
+
+        bool accepts(const TYPE& other);
+        bool equals(const TYPE& other);
+        TYPE_ID getID();
+        std::string getLabel();
+        static std::string ID2Label(TYPE_ID id);
+        static TYPE_ID Label2ID(std::string);
 };
 
 class ANY{

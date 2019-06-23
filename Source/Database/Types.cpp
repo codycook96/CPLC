@@ -1,13 +1,88 @@
 #include "Types.h"
 
+std::vector<std::pair<std::string, TYPE_ID>> TYPE_LABELS = {
+    {"TYPE_ANY", TYPE_ANY},
+    {"TYPE_ANY_DERIVED", TYPE_ANY_DERIVED},
+    {"TYPE_ANY_ELEMENTARY", TYPE_ANY_ELEMENTARY},
+    {"TYPE_ANY_MAGNITUDE", TYPE_ANY_MAGNITUDE},
+    {"TYPE_ANY_NUM", TYPE_ANY_NUM},
+    {"TYPE_ANY_INT", TYPE_ANY_INT},
+    {"TYPE_SINT", TYPE_SINT},
+    {"TYPE_INT", TYPE_INT},
+    {"TYPE_DINT", TYPE_DINT},
+    {"TYPE_LINT", TYPE_LINT},
+    {"TYPE_USINT", TYPE_USINT},
+    {"TYPE_UINT", TYPE_UINT},
+    {"TYPE_UDINT", TYPE_UDINT},
+    {"TYPE_ULINT", TYPE_ULINT},
+    {"TYPE_ANY_REAL", TYPE_ANY_REAL},
+    {"TYPE_REAL", TYPE_REAL},
+    {"TYPE_LREAL", TYPE_LREAL},
+    {"TYPE_TIME", TYPE_TIME},
+    {"TYPE_ANY_BIT", TYPE_ANY_BIT},
+    {"TYPE_BOOL", TYPE_BOOL},
+    {"TYPE_BYTE", TYPE_BYTE},
+    {"TYPE_WORD", TYPE_WORD},
+    {"TYPE_DWORD", TYPE_DWORD},
+    {"TYPE_LWORD", TYPE_LWORD},
+    {"TYPE_ANY_STRING", TYPE_ANY_STRING},
+    {"TYPE_STRING", TYPE_STRING},
+    {"TYPE_WSTRING", TYPE_WSTRING},
+    {"TYPE_ANY_DATE", TYPE_ANY_DATE},
+    {"TYPE_DATE", TYPE_DATE},
+    {"TYPE_DATE_AND_TIME", TYPE_DATE_AND_TIME},
+    {"TYPE_TIME_OF_DAY", TYPE_TIME_OF_DAY}
+};
+
+TYPE::TYPE(): id(TYPE_ANY){}
+
+TYPE::TYPE(TYPE_ID _id): id(_id){}
+
+TYPE::TYPE(std::string label): id(Label2ID(label)){}
+
+TYPE::TYPE(const TYPE& t): id(t.id){}
+
+bool TYPE::accepts(const TYPE& other){
+    return (other.id % id) == 0; 
+}
+
+bool TYPE::equals(const TYPE& other){
+    return id == other.id; 
+}
+
+TYPE_ID TYPE::getID(){
+    return id;
+}
+
+std::string TYPE::getLabel(){
+    return ID2Label(id);
+}
+
+std::string TYPE::ID2Label(TYPE_ID id){
+    for(unsigned int i = 0; i < TYPE_LABELS.size(); i++){
+        if(id == TYPE_LABELS.at(i).second){
+            return TYPE_LABELS.at(i).first;
+        }
+    }   
+    return "";
+}
+
+TYPE_ID TYPE::Label2ID(std::string label){
+    for(unsigned int i = 0; i < TYPE_LABELS.size(); i++){
+        if(label == TYPE_LABELS.at(i).first){
+            return TYPE_LABELS.at(i).second;
+        }
+    } 
+    return TYPE_ANY;
+}
+
+
 ANY::~ANY(){}
 ANY::ANY(const ANY& other): value(other.value){}
 ANY& ANY::operator=(const ANY& other){
     value = other.value;
     return *this;
 }
-
-
 
 ANY_DERIVED::~ANY_DERIVED(){}
 

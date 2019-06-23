@@ -47,7 +47,6 @@ struct DATUM{
 
     template <typename T>
     T& get(){
-        //std::cout << "datum get: " << typeid(T).name() << std::endl;
         return *((T*) datum);
     }
     

@@ -10,9 +10,9 @@
 
 class Database{
     private:
-        std::unordered_map<std::string, std::pair<ANY*, TYPE_ID>> data;
+        std::unordered_map<std::string, std::pair<TYPE, ANY*>> data;
     public:
-        void add(TYPE_ID id, std::string varName);
+        void add(TYPE t, std::string varName);
 
         template <typename T> 
         T link(std::string varName){
@@ -26,7 +26,7 @@ class Database{
             return out;
         }
 
-        TYPE_ID type(std::string varName);
+        TYPE getType(std::string varName);
 };
 
 #endif

@@ -1,8 +1,8 @@
 #include "Database.h"
 
-void Database::add(TYPE_ID id, std::string varName){
+void Database::add(TYPE t, std::string varName){
     ANY* var;
-    switch(id){
+    switch(t.id){
         case TYPE_SINT:  {
                 var = new SINT();
                 //SINT* var = new SINT();
@@ -26,11 +26,15 @@ void Database::add(TYPE_ID id, std::string varName){
 
             break;
     }
-    std::pair<ANY*, TYPE_ID> dataPair(var, id);
-    data.insert(std::pair<std::string, std::pair<ANY*, TYPE_ID>>(varName, dataPair));
+    std::pair<TYPE, ANY*> dataPair(t, var);
+    data.insert(std::pair<std::string, std::pair<TYPE, ANY*>>(varName, dataPair));
 
 }
 
-TYPE_ID Database::type(std::string varName){
-    return data.at(varName).second;
+TYPE Database::getType(std::string varName){
+    if(data.find(varName) == data.end()){
+        std::cout << "No such data exists" << std::endl;
+    }
+    
+    return data.at(varName).first;
 }
